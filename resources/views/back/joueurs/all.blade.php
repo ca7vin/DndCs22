@@ -2,12 +2,12 @@
 @section('content')
 
 @if (session()->has('message'))
-<div class='alert alert-success'>
+<div class='flex items-center justify-center bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded' role='alert'>
     {{ session()->get('message') }}
 </div>
 @endif
 @if ($errors->any())
-<div class='alert alert-danger'>
+<div class='alert alert-danger flex'>
     <ul>
         @foreach ($errors->all() as $error)
         <li>{{ $error }}</li>
@@ -19,7 +19,7 @@
 
 <div class="flex flex-col items-center justify-center">
     <h1 class='my-5 text-3xl uppercase'>Joueurs</h1>
-    <button class='bg-green-400 p-3 rounded'><a href='{{ route('joueur.create') }}'>Create</a></button>
+    <button class='bg-green-400 p-3 rounded mb-5'><a href='{{ route('joueur.create') }}'>Create</a></button>
             <table class="table">
                 <thead>
                     <tr>
@@ -51,8 +51,8 @@
                                         @csrf
                                         <button class="rounded bg-red-400 p-3" type=submit>Delete</button>
                                     </form>
-                                    <button class='rounded bg-yellow-400 p-3' href='{{ route('joueur.edit', $joueur->id) }}'>Edit</button>
-                                    <button class='rounded bg-blue-400 p-3' href='{{ route('joueur.read', $joueur->id) }}'>Read</button>
+                                    <button class='rounded bg-yellow-400 p-3'><a href='{{ route('joueur.edit', $joueur->id) }}'>Edit</a></button>
+                                    <button class='rounded bg-blue-400 p-3'><a href='{{ route('joueur.read', $joueur->id) }}'>Read</a></button>
                                 </div>
                             </td>
                         </tr>

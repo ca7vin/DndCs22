@@ -1,36 +1,33 @@
 @extends('back.layouts.app')
 @section('content')
-    <div class='container'>
-        <h1 class='my-5'>Joueurs</h1>
+    <div class='flex flex-col items-center justify-center'>
+        <h1 class='my-5'>{{ $joueur->Joueur }}</h1>
         <table class='table'>
             <thead>
                 <tr>
-                    <th scope='col'>#</th>
-                    <th scope='col'>Action</th>
-                    <th scope='col'>Joueur</th>
-                    <th scope='col'>Nom</th>
-                    <th scope='col'>Prenom</th>
-                    <th scope='col'>Classe</th>
-                    <th scope='col'>Niveau</th>
-                    <th scope='col'>Experience</th>
-                    <th scope='col'>Race</th>
+                    <th>#</th>
+                    <th>Joueur</th>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Classe</th>
+                    <th>Niveau</th>
+                    <th>Experience</th>
+                    <th>Race</th>
                 </tr> {{-- read_tr_anchor --}}
             </thead>
             <tbody>
                 <tr>
-                    <th scope='row'>{{ $joueur->id }}</th>
-                    <td>{{ $joueur->Joueur }}</td>
-                    <td>{{ $joueur->Nom }}</td>
-                    <td>{{ $joueur->Prenom }}</td>
-                    <td>{{ $joueur->Classe }}</td>
-                    <td>{{ $joueur->Niveau }}</td>
-                    <td>{{ $joueur->Experience }}</td>
-                    <td>{{ $joueur->Race }}</td>
-                    <td> {{-- read_td_anchor --}}
-                        <a class='btn btn-primary' href='{{ route('joueur.index') }}' role='button'>Back</a>
-                    </td>
+                    <th class='text-center'>{{ $joueur->id }}</th>
+                    <td class='text-center'>{{ $joueur->Joueur }}</td>
+                    <td class='text-center'>{{ $joueur->Nom }}</td>
+                    <td class='text-center'>{{ $joueur->Prenom }}</td>
+                    <td class='text-center'>{{ $joueur->Classe }}</td>
+                    <td class='text-center'>{{ $joueur->Niveau }}</td>
+                    <td class='text-center'>{{ $joueur->Experience }}</td>
+                    <td class='text-center'>{{ $joueur->Race }}</td>
                 </tr>
             </tbody>
         </table>
+        <button class="rounded bg-slate-400 p-3 mt-5"><a class='btn btn-primary' href='{{ route('joueur.index') }}' role='button'>Back</a></button>
     </div>
 @endsection

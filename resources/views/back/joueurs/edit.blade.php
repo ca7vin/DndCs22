@@ -1,7 +1,7 @@
 @extends('back.layouts.app')
 @section('content')
-    <div class='container'>
-        <h1>Joueurs</h1>
+    <div class='flex flex-col items-center justify-center'>
+        <h1 class='my-5'>Editer : {{ $joueur->Joueur }} </h1>
         @if ($errors->any())
             <div class='alert alert-danger'>
                 <ul>
@@ -13,35 +13,35 @@
         @endif
         <form action='{{ route('joueur.update' , $joueur->id) }}' method='post'>
             @csrf
-            <div>
-                <label for=>Joueur</label>
-                <input type='text' name='Joueur' value='{{ $joueur->Joueur }}'>
+            <div class='columns-2 flex justify-around mb-2'>
+                <label class='w-full mr-3 p-1' for=''=>Joueur</label>
+                <input class='border shadow p-1'  type='text' name='Joueur' value='{{ $joueur->Joueur }}'>
             </div>
-            <div>
-                <label for=>Nom</label>
-                <input type='text' name='Nom' value='{{ $joueur->Nom }}'>
+            <div class='columns-2 flex justify-around mb-2'>
+                <label class='w-full mr-3 p-1' for=''=>Nom</label>
+                <input class='border shadow p-1'  type='text' name='Nom' value='{{ $joueur->Nom }}'>
             </div>
-            <div>
-                <label for=>Prenom</label>
-                <input type='text' name='Prenom' value='{{ $joueur->Prenom }}'>
+            <div class='columns-2 flex justify-around mb-2'>
+                <label class='w-full mr-3 p-1' for=''=>Prenom</label>
+                <input class='border shadow p-1'  type='text' name='Prenom' value='{{ $joueur->Prenom }}'>
             </div>
-            <div>
-                <label for=>Classe</label>
-                <input type='text' name='Classe' value='{{ $joueur->Classe }}'>
+            <div class='columns-2 flex justify-around mb-2'>
+                <label class='w-full mr-3 p-1' for=''=>Classe</label>
+                <input class='border shadow p-1'  type='text' name='Classe' value='{{ $joueur->Classe }}'>
             </div>
-            <div>
-                <label for=>Niveau</label>
-                <input type='text' name='Niveau' value='{{ $joueur->Niveau }}'>
+            <div class='columns-2 flex justify-around mb-2'>
+                <label class='w-full mr-3 p-1' for=''=>Niveau</label>
+                <input class='border shadow p-1'  type='number' name='Niveau' value='{{ $joueur->Niveau }}'>
             </div>
-            <div>
-                <label for=>Experience</label>
-                <input type='text' name='Experience' value='{{ $joueur->Experience }}'>
+            <div class='columns-2 flex justify-around mb-2'>
+                <label class='w-full mr-3 p-1' for=''=>Experience</label>
+                <input class='border shadow p-1'  type='number' name='Experience' value='{{ $joueur->Experience }}'>
             </div>
-            <div>
-                <label for=>Race</label>
-                <input type='text' name='Race' value='{{ $joueur->Race }}'>
+            <div class='columns-2 flex justify-around mb-2'>
+                <label class='w-full mr-3 p-1' for=''=>Race</label>
+                <input class='border shadow p-1'  type='text' name='Race' value='{{ $joueur->Race }}'>
             </div>
-            <button type='submit'>Update</button> {{-- update_blade_anchor --}}
+            <button class='w-full rounded bg-slate-400 p-2 mt-5' type='submit'>Update</button> {{-- update_blade_anchor --}}
         </form>
     </div>
 @endsection
