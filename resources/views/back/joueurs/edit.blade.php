@@ -11,35 +11,39 @@
                 </ul>
             </div>
         @endif
-        <form action='{{ route('joueur.update' , $joueur->id) }}' method='post'>
+        <form enctype="multipart/form-data" action='{{ route('joueur.update', $joueur->id) }}' method='post' >
             @csrf
             <div class='columns-2 flex justify-around mb-2'>
+                <label class='mr-3' for="Image">Choisissez une image :</label>
+                <input type="file" id="Image" name="Image" accept="image/png, image/jpeg">
+            </div>
+            <div class='columns-2 flex justify-around mb-2'>
                 <label class='w-full mr-3 p-1' for=''=>Joueur</label>
-                <input class='border shadow p-1'  type='text' name='Joueur' value='{{ $joueur->Joueur }}'>
+                <input class='border shadow p-1' type='text' name='Joueur' value='{{ $joueur->Joueur }}'>
             </div>
             <div class='columns-2 flex justify-around mb-2'>
                 <label class='w-full mr-3 p-1' for=''=>Nom</label>
-                <input class='border shadow p-1'  type='text' name='Nom' value='{{ $joueur->Nom }}'>
+                <input class='border shadow p-1' type='text' name='Nom' value='{{ $joueur->Nom }}'>
             </div>
             <div class='columns-2 flex justify-around mb-2'>
                 <label class='w-full mr-3 p-1' for=''=>Prenom</label>
-                <input class='border shadow p-1'  type='text' name='Prenom' value='{{ $joueur->Prenom }}'>
+                <input class='border shadow p-1' type='text' name='Prenom' value='{{ $joueur->Prenom }}'>
             </div>
             <div class='columns-2 flex justify-around mb-2'>
                 <label class='w-full mr-3 p-1' for=''=>Classe</label>
-                <input class='border shadow p-1'  type='text' name='Classe' value='{{ $joueur->Classe }}'>
+                <input class='border shadow p-1' type='text' name='Classe' value='{{ $joueur->Classe }}'>
             </div>
             <div class='columns-2 flex justify-around mb-2'>
                 <label class='w-full mr-3 p-1' for=''=>Niveau</label>
-                <input class='border shadow p-1'  type='number' name='Niveau' value='{{ $joueur->Niveau }}'>
+                <input class='border shadow p-1' type='number' name='Niveau' value='{{ $joueur->Niveau }}'>
             </div>
             <div class='columns-2 flex justify-around mb-2'>
                 <label class='w-full mr-3 p-1' for=''=>Experience</label>
-                <input class='border shadow p-1'  type='number' name='Experience' value='{{ $joueur->Experience }}'>
+                <input class='border shadow p-1' type='number' name='Experience' value='{{ $joueur->Experience }}'>
             </div>
             <div class='columns-2 flex justify-around mb-2'>
                 <label class='w-full mr-3 p-1' for=''=>Race</label>
-                <input class='border shadow p-1'  type='text' name='Race' value='{{ $joueur->Race }}'>
+                <input class='border shadow p-1' type='text' name='Race' value='{{ $joueur->Race }}'>
             </div>
             <button class='w-full rounded bg-slate-400 p-2 mt-5' type='submit'>Update</button> {{-- update_blade_anchor --}}
         </form>

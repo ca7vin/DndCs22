@@ -24,6 +24,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
+                        <th class='text-center'>Image</th>
                         <th class='text-center'>Joueur</th>
                         <th class='text-center'>Nom</th>
                         <th class='text-center'>Prenom</th>
@@ -38,6 +39,9 @@
                     @foreach ($joueurs as $joueur)
                         <tr>
                             <th class='text-center'>{{ $joueur->id }}</th>
+                            <th class='flex items-center justify-center'>
+                                <img class='w-1/4' src="{{ asset('img/' . $joueur->Image) }}" alt="">
+                            </th>
                             <td class='text-center'>{{ $joueur->Joueur }}</td>
                             <td class='text-center'>{{ $joueur->Nom }}</td>
                             <td class='text-center'>{{ $joueur->Prenom }}</td>

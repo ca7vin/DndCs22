@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('joueurs', function (Blueprint $table) {
             $table->id();
+            $table->string('Image');
             $table->string('Joueur');
             $table->string('Nom');
             $table->string('Prenom');
@@ -22,6 +23,7 @@ return new class extends Migration
             $table->string('Niveau');
             $table->string('Experience');
             $table->string('Race');
+            $table->string('Grimoire');
             $table->timestamps();
         });
     }

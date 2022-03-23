@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import "../../node_modules/@fortawesome/fontawesome-free/css/brands.css";
+@import "../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css";
+@import "../../node_modules/@fortawesome/fontawesome-free/css/regular.css";
+@import "../../node_modules/@fortawesome/fontawesome-free/css/solid.css";
+
+@font-face {
+    font-family: "Cormorant";
+    src: url("../fonts/CormorantGaramond-Regular.ttf");
+}
+
+*{
+    font-family: "Cormorant";
+}
+
 table{
-    width: 80% !important;
+    width: 90% !important;
+}
+
+#banner{
+    height: calc(100vh - 70px);
+    background-image: url("../../public/img/banner.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #3d3d3dd0;
+    background-blend-mode: multiply;
 }

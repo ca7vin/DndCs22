@@ -10,6 +10,7 @@ class Joueur extends Model
     use HasFactory;
      
     protected $fillable = [
+        'Image',
         'Joueur',
         'Nom',
         'Prenom',
