@@ -3,7 +3,7 @@
     <div class="flex justify-around items-center">
         @foreach ($joueurs as $joueur)
         <div class="flex flex-col justify-center items-center mx-3">
-            <a href="{{ Route($joueur->Grimoire) }}"><img class="hover:animate-pulse mb-2" src="{{ asset('img/' . $joueur->Image) }}" alt=""></a>
+            <a href=""><img class="mb-2" src="{{ asset('img/' . $joueur->Image) }}" alt=""></a>
             <span class='text-xl font-bold'>{{ $joueur->Prenom }} {{ $joueur->Nom }}</span>
             <span class='text-lg'>{{ $joueur->Classe }} {{ $joueur->Niveau }}</span>
         </div>

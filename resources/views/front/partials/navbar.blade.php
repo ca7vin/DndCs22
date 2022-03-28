@@ -5,8 +5,8 @@
     </div>
     <ul class='flex justify-around items-center w-1/2'>
         <li><a href="{{ Route('home') }}" class="text-gray-300 text-xl">Home</a></li>
-        <li><a href="" class="text-gray-300 text-xl">Résumés</a></li>
-        <li><a href="" class="text-gray-300 text-xl">Joueurs</a></li>
-        <li><a href="" class="text-gray-300 text-xl">Histoire</a></li>
+        <li><a href="{{ Route('pnj') }}" class="text-gray-300 text-xl">PNJ</a></li>
+        <li><a href="" class="text-gray-300 text-xl">Grimoire</a></li>
+        <li></li>
     </ul>
 </nav>

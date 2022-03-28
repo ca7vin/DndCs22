@@ -31,3 +31,12 @@ table{
     background-color: #3d3d3dd0;
     background-blend-mode: multiply;
 }
+
+.imagePnj{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

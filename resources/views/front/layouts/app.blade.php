@@ -10,5 +10,6 @@
 <body>
     @yield('content')
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
 </body>
 </html>

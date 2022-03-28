@@ -24,7 +24,6 @@ class JoueurSeeder extends Seeder
             'Niveau' => '1',
             'Experience' => '25',
             'Race' => 'Humain',
-            'Grimoire' => 'grimoireMagicien',
         ]);
         DB::table('joueurs')->insert([
             'Image' => 'token-nico.png',
@@ -35,7 +34,6 @@ class JoueurSeeder extends Seeder
             'Niveau' => '1',
             'Experience' => '25',
             'Race' => 'Drakéide',
-            'Grimoire' => 'grimoireMagicien',
         ]);
         DB::table('joueurs')->insert([
             'Image' => 'token-samy.png',
@@ -46,7 +44,6 @@ class JoueurSeeder extends Seeder
             'Niveau' => '1',
             'Experience' => '25',
             'Race' => 'Gnome des fôrets',
-            'Grimoire' => 'grimoireMagicien',
         ]);
         DB::table('joueurs')->insert([
             'Image' => 'token-annekat.png',
@@ -57,7 +54,6 @@ class JoueurSeeder extends Seeder
             'Niveau' => '1',
             'Experience' => '25',
             'Race' => 'Drakéide',
-            'Grimoire' => 'grimoireMagicien',
         ]);
         DB::table('joueurs')->insert([
             'Image' => 'token-jade.png',
@@ -68,7 +64,6 @@ class JoueurSeeder extends Seeder
             'Niveau' => '1',
             'Experience' => '25',
             'Race' => 'Humain',
-            'Grimoire' => 'grimoireMagicien',
         ]);
         DB::table('joueurs')->insert([
             'Image' => 'token-elliot.png',
@@ -79,7 +74,6 @@ class JoueurSeeder extends Seeder
             'Niveau' => '1',
             'Experience' => '25',
             'Race' => 'Elfe des bois',
-            'Grimoire' => 'grimoireMagicien',
         ]);
         //
     }

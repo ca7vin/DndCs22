@@ -13,16 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('joueurs', function (Blueprint $table) {
+        Schema::create('pnjs', function (Blueprint $table) {
             $table->id();
-            $table->string('Image');
-            $table->string('Joueur');
-            $table->string('Nom');
-            $table->string('Prenom');
-            $table->string('Classe');
-            $table->string('Niveau');
-            $table->string('Experience');
-            $table->string('Race');
+            $table->string('image');
+            $table->string('prenom');
+            $table->string('nom');
+            $table->integer('age')->unsigned();
+            $table->text('description');
             $table->timestamps();
         });
     }
@@ -34,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('joueurs');
+        Schema::dropIfExists('pnjs');
     }
 };
