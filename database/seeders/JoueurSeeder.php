@@ -21,8 +21,8 @@ class JoueurSeeder extends Seeder
             'Nom' => 'Shin',
             'Prenom' => 'Akiira',
             'Classe' => 'Guerrier',
-            'Niveau' => '1',
-            'Experience' => '25',
+            'Niveau' => '2',
+            'Experience' => '300',
             'Race' => 'Humain',
         ]);
         DB::table('joueurs')->insert([
@@ -31,8 +31,8 @@ class JoueurSeeder extends Seeder
             'Nom' => 'Heratus',
             'Prenom' => 'Galados',
             'Classe' => 'Druide',
-            'Niveau' => '1',
-            'Experience' => '25',
+            'Niveau' => '2',
+            'Experience' => '300',
             'Race' => 'Drakéide',
         ]);
         DB::table('joueurs')->insert([
@@ -41,8 +41,8 @@ class JoueurSeeder extends Seeder
             'Nom' => 'Gebedo',
             'Prenom' => 'Gebedo',
             'Classe' => 'Magicien',
-            'Niveau' => '1',
-            'Experience' => '25',
+            'Niveau' => '2',
+            'Experience' => '300',
             'Race' => 'Gnome des fôrets',
         ]);
         DB::table('joueurs')->insert([
@@ -51,8 +51,8 @@ class JoueurSeeder extends Seeder
             'Nom' => 'Nemesis',
             'Prenom' => 'Sora',
             'Classe' => 'Barbare',
-            'Niveau' => '1',
-            'Experience' => '25',
+            'Niveau' => '2',
+            'Experience' => '300',
             'Race' => 'Drakéide',
         ]);
         DB::table('joueurs')->insert([
@@ -61,19 +61,29 @@ class JoueurSeeder extends Seeder
             'Nom' => 'Caskwing',
             'Prenom' => 'Ennar',
             'Classe' => 'Clerc',
-            'Niveau' => '1',
-            'Experience' => '25',
+            'Niveau' => '2',
+            'Experience' => '300',
             'Race' => 'Humain',
         ]);
         DB::table('joueurs')->insert([
-            'Image' => 'token-elliot.png',
-            'Joueur' => 'Elliot',
-            'Nom' => 'Tachedesang',
-            'Prenom' => 'Argawaen',
-            'Classe' => 'Guerrier',
-            'Niveau' => '1',
-            'Experience' => '25',
-            'Race' => 'Elfe des bois',
+            'Image' => 'token-marcyl.png',
+            'Joueur' => 'Marcyl',
+            'Nom' => '',
+            'Prenom' => 'Byron',
+            'Classe' => 'Occultiste',
+            'Niveau' => '2',
+            'Experience' => '300',
+            'Race' => 'Tieffelin',
+        ]);
+        DB::table('joueurs')->insert([
+            'Image' => 'token-alix.png',
+            'Joueur' => 'Alix',
+            'Nom' => '',
+            'Prenom' => 'Inferno',
+            'Classe' => 'Sorcière',
+            'Niveau' => '2',
+            'Experience' => '300',
+            'Race' => 'Tieffelin',
         ]);
         //
     }

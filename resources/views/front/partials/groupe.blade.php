@@ -1,5 +1,5 @@
-<section id='groupe' class='flex flex-col items-center justify-center m-5 mx-20 mb-10'>
-    <h2 class="text-3xl font-bold uppercase mb-3">Groupe</h2>
+<section id='groupe' class='flex flex-col items-center justify-center mx-5 mb-0 p-10'>
+    <h2 class="text-red-900 text-3xl font-bold uppercase mb-3">Groupe</h2>
     <div class="flex justify-around items-center">
         @foreach ($joueurs as $joueur)
         <div class="flex flex-col justify-center items-center mx-3">

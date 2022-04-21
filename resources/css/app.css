@@ -17,6 +17,15 @@
     font-family: "Cormorant";
 }
 
+body{
+    background-color: #f5edd0;  
+    background-image: url("../../public/img/parchemin.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-blend-mode: overlay;
+    /* background-repeat: no-repeat; */
+}
+
 table{
     width: 90% !important;
 }
@@ -39,4 +48,78 @@ table{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+#lineBetween{
+    width: 1px;
+    height: fit-content;
+    background-color: #292929;
+}
+
+.cornerDeco{
+    width: 200px;
+}
+
+.cardBg{
+    background-color: #f5edd0;  
+    background-image: url("../../public/img/parchemin.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+}
+
+#quote{
+    background-image: url("../../public/img/banner2.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #3d3d3dd0;
+    background-blend-mode: multiply;
+}
+#quote2{
+    background-image: url("../../public/img/banner2.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #3d3d3dd0;
+    background-blend-mode: multiply;
+}
+
+.charBg{
+    background-image: url("../../public/img/pierre.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #837f7fd0;
+    background-blend-mode: multiply;
+}
+.borderDeco1{
+    border-bottom: 20px solid transparent;
+    border-image: url("../../public/img/borderDeco.png") 40 round;
+    border-image-outset: 1;
+}
+.borderDeco2{
+    border-top: 20px solid transparent;
+    border-image: url("../../public/img/borderDeco.png") 40 round;
+    border-image-outset: 1;
+}
+
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #707070; 
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #363636; 
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #f7f0b7; 
 }

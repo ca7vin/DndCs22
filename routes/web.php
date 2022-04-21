@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PnjController;
 use App\Http\Controllers\MagesortController;
 use App\Http\Controllers\JoueurController;
+use App\Http\Controllers\MonstreController;
 use App\Models\Joueur;
 use App\Models\Magesort;
 use App\Models\Pnj;
@@ -19,13 +20,25 @@ use App\Models\Pnj;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// make a route for spell.blade.php
 
-Route::get('/', function () {
-    $joueurs = Joueur::all();
-    return view('front/pages/home', compact('joueurs'));
-})->name('home');
+
+Route::get('/fichepj', function () {
+    return view('front/pages/fichepj');
+})->name('fichepj');
 
 Route::get('/grimoire', [GrimoireController::class, 'index'])->name('grimoire');
+
+Route::get('/monstres', [MonstreController::class, 'index'])->name('monstres');
+
+Route::get('/carte', function () {
+    return view('front/pages/carte');
+})->name('carte');
+Route::get('/', function () {
+    $joueurs = Joueur::all();
+    return view('front/pages/home', compact("joueurs"));
+})->name('home');
+
 
 Route::get('/pnj', function () {
     $pnjs = Pnj::all();
