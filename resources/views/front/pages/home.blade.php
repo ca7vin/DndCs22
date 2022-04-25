@@ -6,6 +6,7 @@
     @include('front/partials/resumes')
     @include('front/partials/quote')
     @include('front/partials/groupe')
+    @include('front/partials/footer')
     
 
     

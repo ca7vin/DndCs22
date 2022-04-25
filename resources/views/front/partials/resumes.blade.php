@@ -1,10 +1,10 @@
 <section id='resumes' class='flex flex-col items-center justify-center my-5 p-10 relative overflow-hidden'>
-
-    <h2 class="text-3xl text-red-900 font-bold uppercase mb-3">Résumés</h2>
-    <div class="flex justify-around items-center">
+    <img class='absolute resumeBg' src="{{ asset('img/resumeBg.jpg') }}" alt="">
+    <h2 class="text-3xl text-center text-red-900 font-bold uppercase mb-10 dividerTitle p-2 w-1/4">Résumés</h2>
+    <div class="flex justify-around items-center z-10">
         {{-- CARD --}}
         <div class="cards max-w-sm rounded overflow-hidden shadow-lg mx-3  bg-gray-900">
-            <img class="w-full" src="{{ asset('img/seance1.jpg') }}" alt="Sunset in the mountains">
+            <img class="" src="{{ asset('img/seance1.jpg') }}" alt="Sunset in the mountains">
             <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2 text-white">#1 - Embuscade en fôret</div>
                 <p class="text-gray-300 text-base">

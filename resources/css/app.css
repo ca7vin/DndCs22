@@ -37,7 +37,7 @@ table{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-color: #3d3d3dd0;
+    background-color: #3d3d3d6c;
     background-blend-mode: multiply;
 }
 
@@ -107,6 +107,55 @@ table{
     border-image-outset: 1;
 }
 
+.borderFiche{
+    border: 30px solid transparent;
+    border-image: url("../../public/img/borderFiche.png") 30 stretch;
+}
+
+.dividerTitle{
+    /* border: 20px solid transparent; */
+    border: 20px solid transparent;
+    border-image: url("../../public/img/divider.png") 60 round;
+}
+.dividerDivT{
+    top: -50%;
+}
+.dividerDivB{
+    bottom: -50%;
+}
+.borderNavB{
+    border-bottom: 20px solid transparent;
+    border-image: url("/img/navBg.png") 50 round;
+    border-image-outset: 1;
+}
+.borderNavT{
+    border-top: 20px solid transparent;
+    border-image: url("/img/navBg2.png") 50 round;
+    border-image-outset: 1;
+}
+
+.dragonL{
+    left: -60%;
+    top: -60px;
+    mix-blend-mode: soft-light;
+}
+.dragonR{
+    right: -60%;
+    top: -60px;
+    mix-blend-mode: soft-light;
+}
+.dragonHead{
+    bottom: 10%;
+    mix-blend-mode: soft-light;
+}
+.resumeBg{
+    width: 100%;
+    mix-blend-mode: soft-light;
+}
+.groupBg{
+    width: 100%;
+    mix-blend-mode: soft-light;
+}
 
 *::-webkit-scrollbar {
     width: 5px;

@@ -1,16 +1,37 @@
 @extends('front/layouts/app')
 @section('content')
     @include('front/partials/navbar')
-    <section class='absolute w-full'>
-        <img src="{{ asset('img/corner-br.png') }}" alt="" class="cornerDeco absolute right-1 bottom-2">
+    <section class='w-full my-5'>
+        {{-- <img src="{{ asset('img/corner-br.png') }}" alt="" class="cornerDeco absolute right-1 bottom-2">
         <img src="{{ asset('img/corner-bl.png') }}" alt="" class="cornerDeco absolute left-1 bottom-2">
         <img src="{{ asset('img/corner-tl.png') }}" alt="" class="cornerDeco absolute left-1 top-2">
-        <img src="{{ asset('img/corner-tr.png') }}" alt="" class="cornerDeco absolute right-1 top-2">
-        <div class="flex flex-col justify-center items-center p-20">
-            <h2 class="text-3xl text-center text-red-900 font-bold uppercase pb-10">Fiche Personnage</h2>
+        <img src="{{ asset('img/corner-tr.png') }}" alt="" class="cornerDeco absolute right-1 top-2"> --}}
+        <div class="flex flex-col justify-center items-center p-10 m-10 borderFiche relative overflow-hidden">
+            <img class='absolute w-full dragonL' src="{{ asset('img/dragonL.png') }}" alt="">
+            <img class='absolute w-full dragonR' src="{{ asset('img/dragonR.png') }}" alt="">
+            <img class='absolute w-1/4 dragonHead' src="{{ asset('img/dragonHead.png') }}" alt="">
+            <h2 class="text-3xl text-center text-red-900 font-bold uppercase mb-10 dividerTitle p-2">Fiche Personnage</h2>
+            <div class="flex justify-around items-center w-full m-20 p-5 relative">
+                <img class='absolute dividerDivT w-1/2' src="{{ asset('img/divider3.png') }}" alt="">
+                <img class='absolute dividerDivB w-1/2' src="{{ asset('img/divider2.png') }}" alt="">
+                <div class="flex flex-col items-center justify-center w-1/5 ml-64">
+                    <p class="text-lg text-red-900 font-bold uppercase">Sora Nemesis </p>
+                    <p class="text-black text-md font-bold capitalize">Drakéide</p>       
+                    <p class="text-black text-md font-bold capitalize">Chaotique bon</p>       
+                </div>
+                <div class="flex flex-col items-center justify-center w-1/5">
+                    <img class='w-1/2' src="{{ asset('img/token-annekat.png') }}" alt="">   
+                    
+                </div>
+                <div class="flex flex-col items-center justify-center w-1/5 mr-64">
+                    <p class="text-red-900 text-lg font-bold uppercase">Barbare</p>
+                    <p class="text-black text-md font-bold capitalize">niveau : <span class="text-2xl">2</span> </p>       
+                    <p class="text-black text-md font-bold capitalize">experience : <span class="text-2xl">300</span> </p>       
+                </div>
+            </div>
             <div class="flex justify-center items-center w-full">
                 {{-- stats --}}
-                <div class="flex flex-col items-center justify-around bg-orange-50 rounded-md p-5 m-3">
+                <div class="flex flex-col items-center justify-around bg-orange-50 rounded-md p-5">
                     <div class="flex flex-col items-center justify-center charBg rounded w-full m-3 py-10">
                         <span class="font-black text-white">FORCE</span>
                         <p class="text-white text-4xl"></p>
@@ -77,29 +98,36 @@
                             </div>
                             <div class="flex flex-col items-center justify-center w-full">
                                 <p class="text-md"><span class="font-bold">Dés de vie :</span> 1d8</p>
-                                <span class="text-red-900 text-md font-bold uppercase text-center py-2">JdS contre la mort</span>
+                                <span class="text-red-900 text-md font-bold uppercase text-center py-2">JdS contre la
+                                    mort</span>
                                 <div class="flex items-center justify-around w-full">
                                     <span class="font-bold text-sm">Succès</span>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                            value="option1">
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                            value="option1">
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                            value="option1">
                                     </div>
                                 </div>
                                 <div class="flex items-center justify-around w-full">
                                     <span class="font-bold text-sm">Echecs</span>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                            value="option1">
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                            value="option1">
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                            value="option1">
                                     </div>
                                 </div>
                             </div>
@@ -180,8 +208,8 @@
                     {{-- skills end --}}
                 </div>
                 {{-- caractere start --}}
-                <div class="flex flex-col justify-around p-5">
-                    <div class="flex items-center justify-center m-3 bg-orange-50 rounded-md p-5 ">
+                <div class="flex flex-col justify-around">
+                    <div class="flex items-center justify-center my-3 bg-orange-50 rounded-md p-5 ">
                         <p class='text-md text-black'><span class="text-red-900 text-lg font-bold uppercase">Traits de
                                 personnalité : </span><br>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores accusamus nam vel
@@ -189,7 +217,7 @@
                             odit culpa quo aliquid reprehenderit assumenda! Quasi a incidunt sit aliquid, voluptate ab
                             aspernatur quaerat.</p>
                     </div>
-                    <div class="flex items-center justify-center m-3 bg-orange-50 rounded-md p-5 ">
+                    <div class="flex items-center justify-center my-3 bg-orange-50 rounded-md p-5 ">
                         <p class='text-md text-black'><span class="text-red-900 text-lg font-bold uppercase">Idéaux :
                             </span><br>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores accusamus nam vel
@@ -197,7 +225,7 @@
                             odit culpa quo aliquid reprehenderit assumenda! Quasi a incidunt sit aliquid, voluptate ab
                             aspernatur quaerat.</p>
                     </div>
-                    <div class="flex items-center justify-center m-3 bg-orange-50 rounded-md p-5 ">
+                    <div class="flex items-center justify-center my-3 bg-orange-50 rounded-md p-5 ">
                         <p class='text-md text-black'><span class="text-red-900 text-lg font-bold uppercase">Liens :
                             </span><br>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores accusamus nam vel
@@ -205,7 +233,7 @@
                             odit culpa quo aliquid reprehenderit assumenda! Quasi a incidunt sit aliquid, voluptate ab
                             aspernatur quaerat.</p>
                     </div>
-                    <div class="flex items-center justify-center m-3 bg-orange-50 rounded-md p-5 ">
+                    <div class="flex items-center justify-center my-3 bg-orange-50 rounded-md p-5 ">
                         <p class='text-md text-black'><span class="text-red-900 text-lg font-bold uppercase">Défauts :
                             </span><br>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores accusamus nam vel
@@ -216,7 +244,7 @@
                 </div>
                 {{-- caractere end --}}
             </div>
-            <div class="flex items-center justify-center m-3 bg-orange-50 rounded-md p-5">
+            <div class="flex items-center justify-center my-3 bg-orange-50 rounded-md p-5">
                 <p class='text-md text-black'><span class="text-red-900 text-lg font-bold uppercase">Capacités et traits :
                     </span><br>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores accusamus nam vel
@@ -225,17 +253,18 @@
                     aspernatur quaerat.</p>
             </div>
             <div class="flex items-center justify-center">
-                <div class="flex flex-col items-center justify-center m-3 bg-orange-50 rounded-md p-5 w-1/2">
-                    <p class='text-md text-black'><span class="text-red-900 text-lg font-bold uppercase">Autres maîtrises et langues :
-                    </span><br>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores accusamus nam vel
-                    voluptatibus voluptas hic, neque quae, nobis quod quos reiciendis minus excepturi, doloribus at
-                    odit culpa quo aliquid reprehenderit assumenda! Quasi a incidunt sit aliquid, voluptate ab
-                    aspernatur quaerat.</p>
+                <div class="flex flex-col items-center justify-center my-3 bg-orange-50 rounded-md p-5 w-1/2">
+                    <p class='text-md text-black'><span class="text-red-900 text-lg font-bold uppercase">Autres maîtrises
+                            et langues :
+                        </span><br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores accusamus nam vel
+                        voluptatibus voluptas hic, neque quae, nobis quod quos reiciendis minus excepturi, doloribus at
+                        odit culpa quo aliquid reprehenderit assumenda! Quasi a incidunt sit aliquid, voluptate ab
+                        aspernatur quaerat.</p>
                 </div>
                 <div class="flex flex-col items-center justify-center m-3 bg-orange-50 rounded-md p-5 w-1/2">
                     <p class='text-md text-black'><span class="text-red-900 text-lg font-bold uppercase">Equipement :
-                    </span>
+                        </span>
                     <div class="flex items-center justify-around w-full my-3">
                         <div class="flex flex-col items-center justify-center p-3 bg-gray-200 rounded-full">
                             <span class='text-2xl'>200</span>
@@ -250,9 +279,14 @@
                             <span class='text-2xl'>200</span>
                         </div>
                     </div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quia, quaerat fuga fugit ut necessitatibus dolor soluta minima itaque rem, optio rerum et animi a dolorum ab possimus quod delectus deserunt voluptas maiores libero natus asperiores. Animi repellat, deserunt corporis maxime dolorum ducimus tenetur doloremque aperiam, id quis sunt. Optio?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quia, quaerat fuga fugit ut
+                        necessitatibus dolor soluta minima itaque rem, optio rerum et animi a dolorum ab possimus quod
+                        delectus deserunt voluptas maiores libero natus asperiores. Animi repellat, deserunt corporis maxime
+                        dolorum ducimus tenetur doloremque aperiam, id quis sunt. Optio?</p>
                 </div>
             </div>
         </div>
     </section>
+    @include('front/partials/footer')
+
 @endsection

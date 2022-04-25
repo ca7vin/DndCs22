@@ -1,7 +1,7 @@
 @extends('front/layouts/app')
 @section('content')
     @include('front/partials/navbar')
-    <section class='absolute'>
+    <section class='my-5 relative'>
         <img src="{{ asset('img/corner-br.png') }}" alt="" class="cornerDeco absolute right-1 bottom-2">
         <img src="{{ asset('img/corner-bl.png') }}" alt="" class="cornerDeco absolute left-1 bottom-2">
         <img src="{{ asset('img/corner-tl.png') }}" alt="" class="cornerDeco absolute left-1 top-2">
@@ -11,7 +11,7 @@
                 <img class='' src="{{ asset('img/map.jpg') }}" alt="" onclick="window.open(this.src)">
             </div>
             <div class="flex flex-col items-start justify-center p-5 w-1/2 h-max">
-                <h1 class='text-red-800 text-3xl font-bold mb-5'>Faërun</h1>
+            <h2 class="text-3xl text-center text-red-900 font-bold uppercase mb-10 dividerTitle p-2">Le monde de Faërun</h2>
                 <p class='pr-10'>Le monde dans lequel sont situés les Royaumes Oubliés se nomme Toril. C'est la planète.
                     Toril est divisé en plusieurs continents. Le plus connu est Faerûn, mais il existe également ceux de
                     Kara-Tur (ambiance orientale, à l'est), Maztica (ambiance aztèque, à l'ouest) et Zakhara (ambiance 1001
@@ -31,8 +31,8 @@
         </div>
         @include('front/partials/quote2')
         <div class="flex flex-col justify-center items-center p-20">
-            <div class="flex flex-col items-start justify-center p-5 h-max">
-                <h1 class='text-red-800 text-3xl capitalize font-bold mb-5 text-center w-full pl-10'>Les plans d'existence</h1>
+            <div class="flex flex-col items-center justify-center p-5 h-max">
+                <h1 class='text-red-800 text-3xl uppercase font-bold mb-5 p-2 dividerTitle'>Les plans d'existence</h1>
                 <p class='pl-10 text-center'>Les plans d'existence sont différentes réalités liées les unes aux autres.
                     Exception faite de rares points de connexion, chaque plan constitue un univers doté de lois. Ils se
                     décomposent en un certain nombre de types : le plan matériel et ses reflets, les plans transitifs, les
@@ -62,4 +62,6 @@
         </div>
 
     </section>
+    @include('front/partials/footer')
+
 @endsection

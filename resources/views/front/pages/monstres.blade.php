@@ -1,7 +1,7 @@
 @extends('front/layouts/app')
 @section('content')
     @include('front/partials/navbar')
-    <section id='monstres' class='flex justify-center items-center w-full'>
+    <section id='monstres' class='flex justify-center items-center w-full my-5'>
         <div class="flex flex-col items-center justify-center w-full">
             @foreach ($monstres as $monstre)
                 <div class="w-full card cardBg relative">
@@ -111,4 +111,6 @@
             @endforeach
         </div>
     </section>
+    @include('front/partials/footer')
+
 @endsection
