@@ -2,11 +2,11 @@
     <h2 class="text-3xl text-center text-red-900 font-bold uppercase mb-10 dividerTitle p-2 w-1/4">Groupe</h2>
     <div class="flex justify-around items-center">
         <img class='absolute groupBg' src="{{ asset('img/groupBg.jpg') }}" alt="">
-        @foreach ($joueurs as $joueur)
+        @foreach ($fiches as $fiche)
         <div class="flex flex-col justify-center items-center mx-3 z-10">
-            <a href=""><img class="mb-2" src="{{ asset('img/' . $joueur->Image) }}" alt=""></a>
-            <span class='text-xl font-bold'>{{ $joueur->Prenom }} {{ $joueur->Nom }}</span>
-            <span class='text-lg'>{{ $joueur->Classe }} {{ $joueur->Niveau }}</span>
+            <img class="mb-2" src="{{ asset('img/' . $fiche->avatar) }}" alt="">
+            <span class='text-xl font-bold'>{{ $fiche->name }}</span>
+            <span class='text-lg'>{{ $fiche->class }} {{ $fiche->level }}</span>
         </div>
         @endforeach
     </div>

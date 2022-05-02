@@ -17,8 +17,6 @@
         <ul class='flex flex-col justify-around items-center'>
             <li><a href="{{ Route('home') }}" class="text-white text-md hover:text-yellow-400">Home</a></li>
             <li><a href="{{ Route('pnj') }}" class="text-white text-md hover:text-yellow-400">PNJ</a></li>
-            <li><a href="{{ Route('grimoire') }}" class="text-white text-md hover:text-yellow-400">Grimoire</a></li>
-            <li><a href="{{ Route('monstres') }}" class="text-white text-md hover:text-yellow-400">Bestiaire</a></li>
             <li><a href="{{ Route('carte') }}" class="text-white text-md hover:text-yellow-400">Carte</a></li>
             {{-- <li><a href="{{ Route('monstres') }}" class="text-gray-300 text-xl">Monstres</a></li> --}}
             <li></li>

@@ -1,6 +1,6 @@
 @extends('front/layouts/app')
 @section('content')
-    @include('front/partials/navbar')
+    @include('layouts.navigation')
     <section id="pnjs" class="mx-10 my-5 flex flex-col items-center justify-center">
         <h1 class="text-red-900 text-3xl mb-5 capitalize text-center font-bold">P.N.J</h1>
         @foreach ($pnjs as $pnj)

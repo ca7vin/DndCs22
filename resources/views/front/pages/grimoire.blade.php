@@ -1,7 +1,8 @@
 @extends('front/layouts/app')
 @section('content')
-@include('front/partials/sidenav')  
-<section id='grimoire' class='home-section flex justify-center items-center w-max'>
+@include('front/partials/sidenav')
+<section id='grimoire' class='home-section flex flex-col justify-center items-center w-full'>
+  @include('layouts.navigation')
     <div class="flex flex-col items-center justify-center">
         @foreach ($spells as $spell)
         <div class="w-full card relative cardBg">

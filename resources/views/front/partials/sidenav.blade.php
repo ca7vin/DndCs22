@@ -1,7 +1,7 @@
 <div class="sidebar">
     <div class="logo-details">
-        <i class="icon fa-solid text-gray-300 fa-dice-d20 fa-3x"></i>
-        <div class="logo_name">Grimoire</div>
+        {{-- <i class="icon fa-solid text-gray-300 fa-dice-d20 fa-3x"></i> --}}
+        <div class="logo_name text-center ml-5">Grimoire</div>
         <i class='bx bx-menu' id="btn"></i>
     </div>
     <ul class="nav-list">
@@ -313,12 +313,12 @@
         </li>
         <li>
             <button id='filterBardBtn'>
-                <i class='flex items-center justify-center'><svg class='icon' version="1.0" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 751.000000 1280.000000"
-                  preserveAspectRatio="xMidYMid meet">
-                 <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                 fill="#ffffff" stroke="none">
-                 <path d="M4104 11920 c-249 -81 -489 -399 -672 -890 -162 -435 -204 -853 -141
+                <i class='flex items-center justify-center'><svg class='icon' version="1.0"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 751.000000 1280.000000"
+                        preserveAspectRatio="xMidYMid meet">
+                        <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="#ffffff"
+                            stroke="none">
+                            <path d="M4104 11920 c-249 -81 -489 -399 -672 -890 -162 -435 -204 -853 -141
                  -1404 25 -220 56 -401 135 -775 52 -245 62 -307 52 -316 -397 -362 -631 -591
                  -826 -810 -478 -536 -765 -1061 -872 -1593 -85 -429 -65 -796 65 -1172 174
                  -503 569 -961 1070 -1237 259 -143 548 -239 845 -279 207 -27 526 -15 733 29
@@ -345,10 +345,10 @@
                  545 209 783 92 156 161 236 687 803 148 160 320 348 383 418 63 70 116 125
                  118 123 3 -2 49 -215 104 -472z m656 -1189 c333 -54 623 -263 763 -550 69
                  -141 91 -230 97 -401 7 -168 -10 -287 -63 -455 -79 -250 -169 -390 -336 -523
-                 -77 -62 -175 -122 -184 -114 -5 5 -444 2027 -444 2046 0 16 53 15 167 -3z"/>
-                 </g>
-                 </svg>
-                 </i>
+                 -77 -62 -175 -122 -184 -114 -5 5 -444 2027 -444 2046 0 16 53 15 167 -3z" />
+                        </g>
+                    </svg>
+                </i>
                 <span class="links_name uppercase font-bold tracking-widest" id="filterBardContent">Bard</span>
             </button>
             <span class="tooltip">Bard</span>
@@ -374,13 +374,13 @@
         </li>
         <li>
             <button id='filterRangerBtn'>
-                <i class='flex items-center justify-center'><svg class="icon" version="1.0" xmlns="http://www.w3.org/2000/svg"
-                   viewBox="0 0 1280.000000 1246.000000"
-                  preserveAspectRatio="xMidYMid meet">
-                 
-                 <g transform="translate(0.000000,1246.000000) scale(0.100000,-0.100000)"
-                 fill="#ffffff" stroke="none">
-                 <path d="M5562 12449 c-86 -17 -321 -101 -383 -137 -281 -164 -399 -527 -323
+                <i class='flex items-center justify-center'><svg class="icon" version="1.0"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280.000000 1246.000000"
+                        preserveAspectRatio="xMidYMid meet">
+
+                        <g transform="translate(0.000000,1246.000000) scale(0.100000,-0.100000)" fill="#ffffff"
+                            stroke="none">
+                            <path d="M5562 12449 c-86 -17 -321 -101 -383 -137 -281 -164 -399 -527 -323
                  -1002 24 -155 63 -309 100 -402 l36 -87 -1376 -2199 -1376 -2200 0 -56 0 -56
                  -127 1 -128 0 -253 315 -253 314 -50 0 c-58 0 -1175 66 -1264 75 l-60 6 408
                  -408 408 -409 -453 -393 c-249 -216 -454 -397 -456 -401 -1 -4 192 -10 430
@@ -408,22 +408,22 @@
                  613 -15 805 -20 193 -5 629 -16 970 -25 341 -8 658 -16 705 -18 l85 -2 31 -87
                  c85 -237 277 -414 518 -475 l70 -18 38 -81 c249 -532 35 -1274 -621 -2154
                  -142 -190 -322 -407 -468 -561 -122 -129 -247 -282 -332 -406 -31 -45 -58 -82
-                 -61 -82 -5 -1 -2320 3932 -2320 3941 0 3 28 4 63 2 34 -2 267 -9 517 -14z"/>
-                 </g>
-                 </svg>
-                 </i>
+                 -61 -82 -5 -1 -2320 3932 -2320 3941 0 3 28 4 63 2 34 -2 267 -9 517 -14z" />
+                        </g>
+                    </svg>
+                </i>
                 <span class="links_name uppercase font-bold tracking-widest" id="filterRangerContent">Ranger</span>
             </button>
             <span class="tooltip">Ranger</span>
         </li>
         <li>
             <button id='filterPaladinBtn'>
-                <i class='flex items-center justify-center'><svg class='icon' version="1.0" xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 1280.000000 1280.000000"
-                  preserveAspectRatio="xMidYMid meet">
-                 <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                 fill="#ffffff" stroke="none">
-                 <path d="M6343 11110 c-46 -28 -58 -58 -109 -267 -56 -235 -86 -336 -131 -438
+                <i class='flex items-center justify-center'><svg class='icon' version="1.0"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280.000000 1280.000000"
+                        preserveAspectRatio="xMidYMid meet">
+                        <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="#ffffff"
+                            stroke="none">
+                            <path d="M6343 11110 c-46 -28 -58 -58 -109 -267 -56 -235 -86 -336 -131 -438
                  -103 -234 -98 -442 14 -663 34 -67 44 -95 36 -103 -6 -6 -9 -26 -6 -44 4 -22
                  -4 -53 -26 -103 -18 -40 -46 -128 -63 -196 l-32 -124 -80 -7 c-291 -24 -589
                  -93 -894 -207 -178 -66 -283 -113 -473 -209 -198 -101 -308 -173 -591 -386
@@ -479,26 +479,14 @@
                  157 -302z m-6942 -38 c87 -179 395 -815 685 -1415 290 -599 572 -1181 626
                  -1292 l98 -203 -805 0 -804 0 0 1621 0 1620 22 -3 c18 -2 50 -62 178 -328z
                  m6693 -1287 l-3 -1618 -799 -3 -800 -2 68 142 c38 79 109 226 158 328 50 102
-                 361 745 693 1430 716 1479 646 1340 668 1340 16 0 17 -89 15 -1617z"/>
-                 </g>
-                 </svg>
-                 
-                 </i>
+                 361 745 693 1430 716 1479 646 1340 668 1340 16 0 17 -89 15 -1617z" />
+                        </g>
+                    </svg>
+
+                </i>
                 <span class="links_name uppercase font-bold tracking-widest" id="filterPaladinContent">Paladin</span>
             </button>
             <span class="tooltip">Paladin</span>
-        </li>
-
-
-        <li class="profile">
-            <div class="profile-details">
-                <!--<img src="profile.jpg" alt="profileImg">-->
-                <div class="name_job">
-                    <div class="name">Prem Shahi</div>
-                    <div class="job">Web designer</div>
-                </div>
-            </div>
-            <a href="{{ Route('home') }}"><i class='icon bx bx-log-out' id="log_out"></i></a>
         </li>
     </ul>
 </div>

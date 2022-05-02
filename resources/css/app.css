@@ -26,6 +26,15 @@ body{
     /* background-repeat: no-repeat; */
 }
 
+.bodyDashboard{
+    background-color: #f5edd0;  
+    background-image: url("../../public/img/parchemin.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-blend-mode: overlay;
+    /* background-repeat: no-repeat; */
+}
+
 table{
     width: 90% !important;
 }
@@ -138,15 +147,28 @@ table{
     left: -60%;
     top: -60px;
     mix-blend-mode: soft-light;
+    z-index: -1;
 }
 .dragonR{
     right: -60%;
     top: -60px;
     mix-blend-mode: soft-light;
+    z-index: -1;
+}
+.dragon2L{
+    left: -30%;
+    top: 5%;
+    mix-blend-mode: soft-light;
+}
+.dragon2R{
+    right: -30%;
+    top: 5%;
+    mix-blend-mode: soft-light;
 }
 .dragonHead{
     bottom: 10%;
     mix-blend-mode: soft-light;
+    z-index: -1;
 }
 .resumeBg{
     width: 100%;
@@ -155,6 +177,11 @@ table{
 .groupBg{
     width: 100%;
     mix-blend-mode: soft-light;
+}
+
+.coin{
+    width: 100px;
+    height: 100px;
 }
 
 *::-webkit-scrollbar {
