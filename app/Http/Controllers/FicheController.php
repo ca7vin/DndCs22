@@ -27,7 +27,7 @@ class FicheController extends Controller
     {
         $fiche = Fiche::find($id);
         $request->validate([
-         'name'=> 'required',
+         'namePerso'=> 'required',
          'background'=> 'required',
          'class'=> 'required',
          'level'=> 'required',
@@ -93,7 +93,8 @@ class FicheController extends Controller
         'bonus_damage1'=> 'required',
         'type_damage1'=> 'required',
         ]); // update_validated_anchor;
-        $fiche->name = $request->name;
+        $fiche->namePerso = $request->namePerso;
+        $fiche->avatar = $request->file("avatar")->hashName();
         $fiche->background = $request->background;
         $fiche->class = $request->class;
         $fiche->level = $request->level;
@@ -159,6 +160,7 @@ class FicheController extends Controller
         $fiche->bonus_attack1 = $request->bonus_attack1;
         $fiche->type_damage1 = $request->type_damage1;
         $fiche->save(); // update_anchor
+        $request->file("avatar")->storePublicly('img', 'public');
         return redirect()->route('fichepj');
     }
 }

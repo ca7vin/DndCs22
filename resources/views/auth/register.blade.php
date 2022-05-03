@@ -1,6 +1,6 @@
 <x-guest-layout class="relative">
-    <img class="absolute dragon2L w-3/5 mix-blend-soft-light" src="{{ asset("img/dragonL.png") }}" alt="">
-    <img class="absolute dragon2R w-3/5 mix-blend-soft-light" src="{{ asset("img/dragonR.png") }}" alt="">
+    <img class="absolute dragon2L w-3/5 mix-blend-soft-light" src="{{ asset('img/dragonL.png') }}" alt="">
+    <img class="absolute dragon2R w-3/5 mix-blend-soft-light" src="{{ asset('img/dragonR.png') }}" alt="">
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
@@ -18,7 +18,8 @@
             <div>
                 <x-label for="name" :value="__('Name')" />
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required
+                    autofocus />
             </div>
 
             <!-- Email Address -->
@@ -32,20 +33,39 @@
             <div class="mt-4">
                 <x-label for="password" :value="__('Password')" />
 
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
+                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required
+                    autocomplete="new-password" />
             </div>
 
             <!-- Confirm Password -->
             <div class="mt-4">
                 <x-label for="password_confirmation" :value="__('Confirm Password')" />
 
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
+                <x-input id="password_confirmation" class="block mt-1 w-full" type="password"
+                    name="password_confirmation" required />
             </div>
+
+            {{-- FICHE PERSO --}}
+            <!-- Name -->
+            <div class="mt-10">
+                <x-label for="namePerso" :value="__('Nom du perso')" />
+                <x-input id="name" class="block mt-1 w-full" type="text" name="namePerso" :value="old('namePerso')" required
+                    autofocus />
+            </div>
+            <!-- Avatar -->
+            <div class="mt-4">
+                <x-label for="avatar" :value="__('Choisissez un avatar')" />
+                <x-input id="name" class="block mt-1 w-full text-white" type="file" name="avatar" :value="old('avatar')"
+                    required autofocus />
+            </div>
+            <!-- Background -->
+            <div class="mt-4">
+                <x-label for="background" :value="__('Historique')" />
+                <x-input id="name" class="block mt-1 w-full" type="text" name="background" :value="old('background')" required
+                    autofocus />
+            </div>
+
+
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-white" href="{{ route('login') }}">

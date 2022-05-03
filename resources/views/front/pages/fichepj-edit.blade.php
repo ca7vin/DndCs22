@@ -2,7 +2,7 @@
 @section('content')
     @include('layouts.navigation')
     <section class='w-full my-5'>
-        <form action="{{ route('fiche.update', \Illuminate\Support\Facades\Auth::user()->fiche->id) }}" method="POST">
+        <form action="{{ route('fiche.update', \Illuminate\Support\Facades\Auth::user()->fiche->id) }}" enctype="multipart/form-data" method="POST">
             @method('POST')
             @csrf
             {{-- <img src="{{ asset('img/corner-br.png') }}" alt="" class="cornerDeco absolute right-1 bottom-2">
@@ -28,33 +28,39 @@
                     <img class='absolute dividerDivT w-1/2' src="{{ asset('img/divider3.png') }}" alt="">
                     <img class='absolute dividerDivB w-1/2' src="{{ asset('img/divider2.png') }}" alt="">
                     <div class="flex flex-col items-center justify-center w-1/5 ml-64">
-                        <div>
-                            <input class="form-input" type='text' name='name'
-                                value='{{ \Illuminate\Support\Facades\Auth::user()->fiche->name }}'>
+                        <div class='flex flex-col items-center justify-center mb-3'>
+                            <label for="namePerso">Nom</label>
+                            <input class="form-input" type='text' name='namePerso'
+                                value='{{ \Illuminate\Support\Facades\Auth::user()->fiche->namePerso }}'>
                         </div>
-                        <div>
+                        <div class='flex flex-col items-center justify-center mb-3'>
+                            <label for="name">Race</label>
                             <input class="form-input" type='text' name='race'
                                 value='{{ \Illuminate\Support\Facades\Auth::user()->fiche->race }}'>
                         </div>
-                        <div>
+                        <div class='flex flex-col items-center justify-center mb-3'>
+                            <label for="name">Alignement</label>
                             <input class="form-input" type='text' name='alignment'
                                 value='{{ \Illuminate\Support\Facades\Auth::user()->fiche->alignment }}'>
                         </div>
                     </div>
                     <div class="flex flex-col items-center justify-center w-1/5">
-                        <img class='w-1/2'
-                            src="{{ asset('img/' . \Illuminate\Support\Facades\Auth::user()->fiche->avatar) }}" alt="">
+                        <label for="avatar">Choisissez un avatar :</label>
+                        <input type="file" id="avatar" name="avatar">
                     </div>
                     <div class="flex flex-col items-center justify-center w-1/5 mr-64">
-                        <div>
+                        <div class='flex flex-col items-center justify-center mb-3'>
+                            <label for="name">Classe</label>
                             <input class="form-input" type='text' name='class'
                                 value='{{ \Illuminate\Support\Facades\Auth::user()->fiche->class }}'>
                         </div>
-                        <div>
+                        <div class='flex flex-col items-center justify-center mb-3'>
+                            <label for="name">Niveau</label>
                             <input class="form-input" type='text' name='level'
                                 value='{{ \Illuminate\Support\Facades\Auth::user()->fiche->level }}'>
                         </div>
-                        <div>
+                        <div class='flex flex-col items-center justify-center mb-3'>
+                            <label for="name">Experience</label>
                             <input class="form-input" type='text' name='experience'
                                 value='{{ \Illuminate\Support\Facades\Auth::user()->fiche->experience }}'>
                         </div>
@@ -345,7 +351,8 @@
                     </div>
                     {{-- caractere start --}}
                     <div class="flex flex-col justify-around">
-                        <div class="flex flex-col items-center justify-center my-3 text-center bg-orange-50 rounded-md p-5 w-full">
+                        <div
+                            class="flex flex-col items-center justify-center my-3 text-center bg-orange-50 rounded-md p-5 w-full">
                             <p class='text-md text-black w-full'><span
                                     class="text-red-900 text-lg font-bold uppercase">Lanceur de sort :
                                 </span><br>
@@ -415,14 +422,28 @@
                     <span class="text-red-900 text-xl font-bold uppercase my-3">Armes :
                     </span>
                     <div class="flex items-center justify-center w-full">
-                        <input class='w-1/5 form-input' type='text' name='weapon1'
-                            value='{{ \Illuminate\Support\Facades\Auth::user()->fiche->weapon1 }}'>
-                        <input class='w-1/5 form-input ml-3' type='text' name='bonus_attack1'
-                            value='{{ \Illuminate\Support\Facades\Auth::user()->fiche->bonus_attack1 }}'>
-                        <input class='w-1/5 form-input mx-3' type='text' name='bonus_damage1'
-                            value='{{ \Illuminate\Support\Facades\Auth::user()->fiche->bonus_damage1 }}'>
-                        <input class='w-1/5 form-input' type='text' name='type_damage1'
-                            value='{{ \Illuminate\Support\Facades\Auth::user()->fiche->type_damage1 }}'>
+                        <div class="flex flex-col items-center justify-center w-1/5">
+                            <label for="weapon1">Nom</label>
+                            <input class='w-full form-input' type='text' name='weapon1'
+                                value='{{ \Illuminate\Support\Facades\Auth::user()->fiche->weapon1 }}'>
+                        </div>
+
+                        <div class="flex flex-col items-center justify-center w-1/5">
+                            <label for="bonus_attack1">Bonus ATK</label>
+                            <input class='w-full form-input' type='text' name='bonus_attack1'
+                                value='{{ \Illuminate\Support\Facades\Auth::user()->fiche->bonus_attack1 }}'>
+                        </div>
+                        <div class="flex flex-col items-center justify-center w-1/5">
+                            <label for="bonus_damage1">Bonus DMG</label>
+                            <input class='w-full form-input' type='text' name='bonus_damage1'
+                                value='{{ \Illuminate\Support\Facades\Auth::user()->fiche->bonus_damage1 }}'>
+                        </div>
+                        <div class="flex flex-col items-center justify-center w-1/5">
+                            <label for="type_damage1">Type de DMG</label>
+                            <input class='w-full form-input' type='text' name='type_damage1'
+                                value='{{ \Illuminate\Support\Facades\Auth::user()->fiche->type_damage1 }}'>
+                        </div>
+
                     </div>
                 </div>
                 <div class="flex items-center justify-center my-3 bg-orange-50 rounded-md p-5 w-full">

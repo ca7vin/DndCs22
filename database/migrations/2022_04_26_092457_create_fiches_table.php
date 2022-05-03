@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('fiches', function (Blueprint $table) {
             $table->id();
             $table->foreignId("user_id")->constrained("users", "id");
-            $table->string('name');
+            $table->string('namePerso');
             $table->string('class');
             $table->integer('level')->unsigned();
             $table->string('background');

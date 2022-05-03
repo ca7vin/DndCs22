@@ -5,7 +5,7 @@
         @foreach ($fiches as $fiche)
         <div class="flex flex-col justify-center items-center mx-3 z-10">
             <img class="mb-2" src="{{ asset('img/' . $fiche->avatar) }}" alt="">
-            <span class='text-xl font-bold'>{{ $fiche->name }}</span>
+            <span class='text-xl font-bold'>{{ $fiche->namePerso }}</span>
             <span class='text-lg'>{{ $fiche->class }} {{ $fiche->level }}</span>
         </div>
         @endforeach

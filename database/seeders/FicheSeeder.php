@@ -16,8 +16,8 @@ class FicheSeeder extends Seeder
     public function run()
     {
         DB::table('fiches')->insert([
-            'user_id' => 2,
-            'name' => 'Sora Nemesis',
+            'user_id' => 1,
+            'namePerso' => 'Sora Nemesis',
             'class' => 'Barbare',
             'level' => 2,
             'background' => 'Soldat',
@@ -85,8 +85,8 @@ class FicheSeeder extends Seeder
             'type_damage1' => 'Tranchant',
         ]);
         DB::table('fiches')->insert([
-            'user_id' => 3,
-            'name' => 'Shin Akira',
+            'user_id' => 2,
+            'namePerso' => 'Shin Akira',
             'class' => 'Guerrier',
             'level' => 2,
             'background' => 'Soldat',
@@ -172,8 +172,8 @@ class FicheSeeder extends Seeder
             'type_damage1' => 'Tranchant',
         ]);
         DB::table('fiches')->insert([
-            'user_id' => 4,
-            'name' => 'Byron',
+            'user_id' => 3,
+            'namePerso' => 'Byron',
             'class' => 'Occultiste',
             'level' => 2,
             'background' => 'Acolyte',
@@ -259,8 +259,8 @@ class FicheSeeder extends Seeder
             'type_damage1' => 'Tranchant',
         ]);
         DB::table('fiches')->insert([
-            'user_id' => 5,
-            'name' => 'Gebedo Gebedo',
+            'user_id' => 4,
+            'namePerso' => 'Gebedo Gebedo',
             'class' => 'Magicien',
             'level' => 2,
             'background' => 'Sage',
@@ -329,8 +329,8 @@ class FicheSeeder extends Seeder
         ]);
         //
         DB::table('fiches')->insert([
-            'user_id' => 6,
-            'name' => 'Galestron',
+            'user_id' => 5,
+            'namePerso' => 'Galestron',
             'class' => 'Druide',
             'level' => 2,
             'background' => 'Fouille-merde',
@@ -416,8 +416,8 @@ class FicheSeeder extends Seeder
             'type_damage1' => 'Tranchant',
         ]);
         DB::table('fiches')->insert([
-            'user_id' => 7,
-            'name' => 'Ennar Caskwing',
+            'user_id' => 6,
+            'namePerso' => 'Ennar Caskwing',
             'class' => 'Clerc',
             'level' => 2,
             'background' => 'Acolyte',
@@ -503,8 +503,8 @@ class FicheSeeder extends Seeder
             'type_damage1' => 'Tranchant',
         ]);
         DB::table('fiches')->insert([
-            'user_id' => 8,
-            'name' => 'Inferno',
+            'user_id' => 7,
+            'namePerso' => 'Inferno',
             'class' => 'Sorcière',
             'level' => 2,
             'background' => 'Acolyte',

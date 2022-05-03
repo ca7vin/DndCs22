@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-2xl text-red-900 leading-tight">
-            Bienvenue {{ Auth::user()->fiche->name }}
+            Bienvenue {{ Auth::user()->fiche->namePerso }}
         </h2>
     </x-slot>
 

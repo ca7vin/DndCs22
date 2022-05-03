@@ -20,7 +20,7 @@
                     <img class='absolute dividerDivT w-1/2' src="{{ asset('img/divider3.png') }}" alt="">
                     <img class='absolute dividerDivB w-1/2' src="{{ asset('img/divider2.png') }}" alt="">
                     <div class="flex flex-col items-center justify-center w-1/5 ml-64">
-                        <p class='text-2xl font-bold uppercase text-red-900'>{{ \Illuminate\Support\Facades\Auth::user()->fiche->name }}</p>
+                        <p class='text-2xl font-bold uppercase text-red-900'>{{ \Illuminate\Support\Facades\Auth::user()->fiche->namePerso }}</p>
                         <p>Race : {{ \Illuminate\Support\Facades\Auth::user()->fiche->race }}</p>
                         <p>Alignement : {{ \Illuminate\Support\Facades\Auth::user()->fiche->alignment }}</p>
                     </div>
