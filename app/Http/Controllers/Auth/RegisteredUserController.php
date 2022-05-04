@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Background;
 use App\Models\Fiche;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
@@ -21,7 +22,8 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        $backgrounds=Background::all();
+        return view('auth.register', compact('backgrounds'));
     }
 
     /**
@@ -44,6 +46,7 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'background_id' => $request->background,
         ]);
         $user->save();
 
@@ -51,7 +54,6 @@ class RegisteredUserController extends Controller
         $fiche->user_id = $user->id;
         $fiche->namePerso = $request->namePerso;
         $fiche->avatar = $request->file("avatar")->hashName();
-        $fiche->background = $request->background;
         $fiche->class = $request->class;
         $fiche->level = $request->level;
         $fiche->race = $request->race;
@@ -80,7 +82,7 @@ class RegisteredUserController extends Controller
         $fiche->history = $request->history;
         $fiche->insight = $request->insight;
         $fiche->intimidation = $request->intimidation;
-        $fiche->investigation = $request->investigation;
+        $fiche->investigation = $request->investigation; //
         $fiche->medicine = $request->medicine;
         $fiche->nature = $request->nature;
         $fiche->perception = $request->perception;
@@ -95,7 +97,7 @@ class RegisteredUserController extends Controller
         $fiche->speed = $request->speed;
         $fiche->current_hitpoints = $request->current_hitpoints;
         $fiche->temporary_hitpoints = $request->temporary_hitpoints;
-        $fiche->hit_dice = $request->hit_dice;
+        $fiche->hit_dice = $request->hit_dice; //
         $fiche->personality_traits = $request->personality_traits;
         $fiche->personality_ideals = $request->personality_ideals;
         $fiche->personality_bonds = $request->personality_bonds;

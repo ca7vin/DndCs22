@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'background_id',
     ];
 
     /**
@@ -45,5 +46,10 @@ class User extends Authenticatable
     public function fiche()
     {
         return $this->hasOne(Fiche::class);
+    }
+
+    public function background()
+    {
+        return $this->belongsTo(Background::class);
     }
 }

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Background;
 use App\Models\Fiche;
 use Illuminate\Http\Request;
+// use Illuminate\Support\Facades\Auth;
 
 class FicheController extends Controller
 {
@@ -21,14 +23,14 @@ class FicheController extends Controller
     public function edit($id)
     {
         $fiche = Fiche::find($id);
-        return view("/front/pages/fichepj-edit",compact("fiche"));
+        $backgrounds = Background::all();
+        return view("/front/pages/fichepj-edit",compact("fiche", "backgrounds"));
     }
     public function update($id, Request $request)
     {
         $fiche = Fiche::find($id);
         $request->validate([
          'namePerso'=> 'required',
-         'background'=> 'required',
          'class'=> 'required',
          'level'=> 'required',
          'race'=> 'required',
@@ -95,7 +97,9 @@ class FicheController extends Controller
         ]); // update_validated_anchor;
         $fiche->namePerso = $request->namePerso;
         $fiche->avatar = $request->file("avatar")->hashName();
-        $fiche->background = $request->background;
+        // $fiche->background = $request->background;
+        $fiche->user->background_id = $request->background;
+        $fiche->user->save();
         $fiche->class = $request->class;
         $fiche->level = $request->level;
         $fiche->race = $request->race;

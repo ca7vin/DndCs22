@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('namePerso');
             $table->string('class');
             $table->integer('level')->unsigned();
-            $table->string('background');
+            // $table->string('background');
             $table->string('race');
             $table->string('alignment');
             $table->integer('experience')->unsigned();

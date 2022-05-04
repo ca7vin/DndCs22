@@ -16,7 +16,7 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body class="overflow-hidden">
+    <body class="overflow-x-hidden p-10">
         <div class="font-sans text-gray-900 antialiased w-full">
             {{ $slot }}
         </div>

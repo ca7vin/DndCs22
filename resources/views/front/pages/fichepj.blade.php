@@ -310,7 +310,8 @@
                             <p class='text-md text-black w-full'><span
                                     class="text-red-900 text-lg font-bold uppercase">Historique :
                                 </span><br>
-                                {{ \Illuminate\Support\Facades\Auth::user()->fiche->background }}
+                                {{-- {{dd(\Illuminate\Support\Facades\Auth::user())}} --}}
+                                {{ \Illuminate\Support\Facades\Auth::user()->background->backgroundName }}
                             </p>
                         </div>
                         <div class="flex items-center justify-center my-3 text-center bg-orange-50 rounded-md p-5 w-full">

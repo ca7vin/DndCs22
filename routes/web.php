@@ -1,12 +1,14 @@
 <?php
 
 use App\Http\Controllers\GrimoireController;
+use App\Http\Controllers\BackgroundController;
 use App\Http\Controllers\FicheController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PnjController;
 use App\Http\Controllers\MagesortController;
 use App\Http\Controllers\JoueurController;
 use App\Http\Controllers\MonstreController;
+use App\Models\Background;
 use App\Models\Fiche;
 use App\Models\Joueur;
 use App\Models\Magesort;
@@ -23,13 +25,12 @@ use App\Models\Pnj;
 |
 */
 // make a route for spell.blade.php
-
-
-// Route::get('/fichepj-edit', function () {
-//     return view('front/pages/fichepj-edit');
-// })->name('fichepj-edit');
+Route::get('/fichepj-edit', function () {
+    return view('front/pages/fichepj-edit');
+})->name('fichepj-edit');
 
 Route::get('/fichepj', function () {
+    // $backgrounds = Background::all();
     return view('front/pages/fichepj');
 })->name('fichepj');
 
@@ -88,3 +89,6 @@ Route::get('/back/fiches', [FicheController::class, 'index'])->name('fiche.index
 Route::get('/back/fiches/{id}/read', [FicheController::class, 'read'])->name('fiche.read');
 Route::get('/back/fiches/{id}/edit', [FicheController::class, 'edit'])->name('fiche.edit');
 Route::post('/back/fiches/{id}/update', [FicheController::class, 'update'])->name('fiche.update');
+// Background
+Route::get('/back/backgrounds', [BackgroundController::class, 'index'])->name('background.index');
+Route::get('/back/backgrounds/{id}/read', [BackgroundController::class, 'read'])->name('background.read');

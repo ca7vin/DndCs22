@@ -18,7 +18,7 @@
                 <h2 class="font-semibold text-2xl m-5 uppercase text-center text-red-900">
                     Résumés
                 </h2>
-                <div class="cards w-1/2 shadow-lg mx-3  bg-gray-900">
+                <div class="cards w-1/2 shadow-lg mx-3  bgAuth">
                     <img class="w-full" src="{{ asset('img/seance1.jpg') }}" alt="Sunset in the mountains">
                     <div class="px-6 py-4">
                         <div class="font-bold text-xl mb-2 text-white">#1 - Embuscade en fôret</div>
@@ -31,7 +31,7 @@
                         </p>
                     </div>
                     <div class="flex items-center justify-center px-6 pt-4 pb-2">
-                        <button class="bg-white rounded p-2 text-gray-900 w-full mb-3"><i class="fa-solid fa-plus"></i></button>
+                        <button class="bg-white rounded p-2 textAuth w-full mb-3"><i class="fa-solid fa-plus"></i></button>
                     </div>
                 </div>
             </div>

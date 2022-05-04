@@ -2,7 +2,8 @@
 @section('content')
     @include('layouts.navigation')
     <section class='w-full my-5'>
-        <form action="{{ route('fiche.update', \Illuminate\Support\Facades\Auth::user()->fiche->id) }}" enctype="multipart/form-data" method="POST">
+        <form action="{{ route('fiche.update', \Illuminate\Support\Facades\Auth::user()->fiche->id) }}"
+            enctype="multipart/form-data" method="POST">
             @method('POST')
             @csrf
             {{-- <img src="{{ asset('img/corner-br.png') }}" alt="" class="cornerDeco absolute right-1 bottom-2">
@@ -372,12 +373,18 @@
                             </div>
                             </p>
                         </div>
-                        <div class="flex items-center justify-center my-3 text-center bg-orange-50 rounded-md p-5 w-full">
+                        <div
+                            class="flex flex-col items-center justify-center my-3 text-center bg-orange-50 rounded-md p-5 w-full">
                             <p class='text-md text-black w-full'><span
                                     class="text-red-900 text-lg font-bold uppercase">Historique :
                                 </span><br>
-                                <input type="text" name='background'
-                                    value="{{ \Illuminate\Support\Facades\Auth::user()->fiche->background }}">
+                            <div class="flex justify-center">
+                                <select name='background' class="" aria-label="Default select example">
+                                    @foreach ($backgrounds as $background)
+                                        <option value="{{ $background->id }}">{{ $background->backgroundName }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                             </p>
                         </div>
                         <div class="flex items-center justify-center my-3 text-center bg-orange-50 rounded-md p-5 w-full">
