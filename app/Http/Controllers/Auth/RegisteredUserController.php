@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\Background;
 use App\Models\Fiche;
+use App\Models\Race;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -23,7 +24,8 @@ class RegisteredUserController extends Controller
     public function create()
     {
         $backgrounds=Background::all();
-        return view('auth.register', compact('backgrounds'));
+        $races=Race::all();
+        return view('auth.register', compact('backgrounds', 'races'));
     }
 
     /**
@@ -47,6 +49,7 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'background_id' => $request->background,
+            'race_id' => $request->race,
         ]);
         $user->save();
 

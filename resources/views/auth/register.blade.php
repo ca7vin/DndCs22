@@ -101,8 +101,11 @@
             <!-- Race -->
             <div class="mt-4">
                 <x-label for="race" :value="__('Race')" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="race" :value="old('race')" required
-                    autofocus />
+                    <select name='race' class="" aria-label="Default select example">
+                        @foreach ($races as $race)
+                            <option value="{{ $race->id }}">{{ $race->race }}</option>
+                        @endforeach
+                    </select>
             </div>
             <!-- Level -->
             <div class="mt-4">

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->foreignId("background_id")->constrained("backgrounds", "id");
+            $table->foreignId("race_id")->constrained("races", "id");
             $table->rememberToken();
             $table->timestamps();
         });
