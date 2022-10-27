@@ -1,9 +1,14 @@
 @extends('front/layouts/app')
 @section('content')
+@include('front/partials/sidenav2')
+<section id='monstres' class='home-section flex flex-col items-center w-full'>
     @include('layouts.navigation')
-
-    <section id='monstres' class='flex justify-center items-center w-full my-5'>
         <div class="flex flex-col items-center justify-center w-full">
+            <div class="flex items-center justify-around mt-5">
+                <a href="?page={{ $previous }}" class="bg-black text-white px-2 py-1 flex items-center justify-center"><i class='bx bxs-chevrons-left'></i></a>
+                <p class="mx-10 text-xl">{{$page}} sur 30</p>
+                <a href="?page={{ $next }}" class="bg-black text-white px-2 py-1 flex items-center justify-center"><i class='bx bxs-chevrons-right'></i></a>
+            </div>
             @foreach ($monstres as $monstre)
                 <div class="w-full card cardBg relative">
                     <div
@@ -12,7 +17,7 @@
                             <p class="text-sm text-black flex items-center font-black capitalize">
                                 {{ $monstre['type'] }} {{ $monstre['subtype'] }}
                             </p>
-                            <div class="text-red-800 font-black uppercase text-xl spells">{{ $monstre['name'] }}</div>
+                            <div class="text-red-800 font-black uppercase text-xl monstres">{{ $monstre['name'] }}</div>
                             <div class="text-black capitalize text-sm mb-2"><span class="font-bold">Challenge :
                                 </span>{{ $monstre['challenge_rating'] }}</div>
                             <div class="flex items-center justify-around p-5 w-full">

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('password');
             $table->foreignId("background_id")->constrained("backgrounds", "id");
             $table->foreignId("race_id")->constrained("races", "id");
+            $table->foreignId("classe_id")->constrained("classes", "id");
             $table->rememberToken();
             $table->timestamps();
         });

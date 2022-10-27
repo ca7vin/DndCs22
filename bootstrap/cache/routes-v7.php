@@ -24,7 +24,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::2xTDitj0yo35SdMY',
+            '_route' => 'generated::6feos2y20sgzGB8l',
           ),
           1 => NULL,
           2 => 
@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::ZCSLTH276X7PFG8N',
+            '_route' => 'generated::1U2T7gWFxKFgHWPY',
           ),
           1 => NULL,
           2 => 
@@ -476,7 +476,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::7NlLHQbG4pB8bZ3E',
+            '_route' => 'generated::d2t7u8FQSWwHsxKE',
           ),
           1 => NULL,
           2 => 
@@ -512,7 +512,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::DycGviRB6FWNA5ER',
+            '_route' => 'generated::gJDsUpoyaml2bIoP',
           ),
           1 => NULL,
           2 => 
@@ -642,7 +642,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::3hHjsnKlLAZHG9Bu',
+            '_route' => 'generated::V1rIngzPVBVPnUth',
           ),
           1 => NULL,
           2 => 
@@ -714,10 +714,50 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/back/races' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'race.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/back/classes' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'classe.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
     ),
     2 => 
     array (
-      0 => '{^(?|/back/(?|joueurs/([^/]++)/(?|read(*:40)|edit(*:51)|update(*:64)|delete(*:77))|magesorts/([^/]++)/(?|read(*:111)|edit(*:123)|update(*:137)|delete(*:151))|pnjs/([^/]++)/(?|read(*:181)|edit(*:193)|update(*:207)|delete(*:221))|fiches/([^/]++)/(?|read(*:253)|edit(*:265)|update(*:279))|backgrounds/([^/]++)/read(*:313))|/reset\\-password/([^/]++)(*:347)|/verify\\-email/([^/]++)/([^/]++)(*:387))/?$}sDu',
+      0 => '{^(?|/back/(?|joueurs/([^/]++)/(?|read(*:40)|edit(*:51)|update(*:64)|delete(*:77))|magesorts/([^/]++)/(?|read(*:111)|edit(*:123)|update(*:137)|delete(*:151))|pnjs/([^/]++)/(?|read(*:181)|edit(*:193)|update(*:207)|delete(*:221))|fiches/([^/]++)/(?|read(*:253)|edit(*:265)|update(*:279))|backgrounds/([^/]++)/read(*:313)|races/([^/]++)/read(*:340)|classes/([^/]++)/read(*:369))|/reset\\-password/([^/]++)(*:403)|/verify\\-email/([^/]++)/([^/]++)(*:443))/?$}sDu',
     ),
     3 => 
     array (
@@ -1082,7 +1122,53 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      347 => 
+      340 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'race.read',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      369 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'classe.read',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      403 => 
       array (
         0 => 
         array (
@@ -1105,7 +1191,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      387 => 
+      443 => 
       array (
         0 => 
         array (
@@ -1144,7 +1230,7 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-    'generated::2xTDitj0yo35SdMY' => 
+    'generated::6feos2y20sgzGB8l' => 
     array (
       'methods' => 
       array (
@@ -1165,7 +1251,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'as' => 'generated::2xTDitj0yo35SdMY',
+        'as' => 'generated::6feos2y20sgzGB8l',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1290,7 +1376,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::ZCSLTH276X7PFG8N' => 
+    'generated::1U2T7gWFxKFgHWPY' => 
     array (
       'methods' => 
       array (
@@ -1313,7 +1399,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::ZCSLTH276X7PFG8N',
+        'as' => 'generated::1U2T7gWFxKFgHWPY',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2441,7 +2527,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::7NlLHQbG4pB8bZ3E' => 
+    'generated::d2t7u8FQSWwHsxKE' => 
     array (
       'methods' => 
       array (
@@ -2462,7 +2548,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::7NlLHQbG4pB8bZ3E',
+        'as' => 'generated::d2t7u8FQSWwHsxKE',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2516,7 +2602,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::DycGviRB6FWNA5ER' => 
+    'generated::gJDsUpoyaml2bIoP' => 
     array (
       'methods' => 
       array (
@@ -2537,7 +2623,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::DycGviRB6FWNA5ER',
+        'as' => 'generated::gJDsUpoyaml2bIoP',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2857,7 +2943,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::3hHjsnKlLAZHG9Bu' => 
+    'generated::V1rIngzPVBVPnUth' => 
     array (
       'methods' => 
       array (
@@ -2878,7 +2964,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::3hHjsnKlLAZHG9Bu',
+        'as' => 'generated::V1rIngzPVBVPnUth',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3137,6 +3223,154 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'background.read',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'race.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'back/races',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\RaceController@index',
+        'controller' => 'App\\Http\\Controllers\\RaceController@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'race.index',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'race.read' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'back/races/{id}/read',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\RaceController@read',
+        'controller' => 'App\\Http\\Controllers\\RaceController@read',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'race.read',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'classe.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'back/classes',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ClasseController@index',
+        'controller' => 'App\\Http\\Controllers\\ClasseController@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'classe.index',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'classe.read' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'back/classes/{id}/read',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ClasseController@read',
+        'controller' => 'App\\Http\\Controllers\\ClasseController@read',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'classe.read',
       ),
       'fallback' => false,
       'defaults' => 

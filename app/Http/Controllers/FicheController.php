@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Background;
+use App\Models\Classe;
 use App\Models\Fiche;
+use App\Models\Race;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+
 // use Illuminate\Support\Facades\Auth;
 
 class FicheController extends Controller
@@ -24,7 +28,9 @@ class FicheController extends Controller
     {
         $fiche = Fiche::find($id);
         $backgrounds = Background::all();
-        return view("/front/pages/fichepj-edit",compact("fiche", "backgrounds"));
+        $races = Race::all();
+        $classes = Classe::all();
+        return view("/front/pages/fichepj-edit",compact("fiche", "backgrounds", "races", "classes"));
     }
     public function update($id, Request $request)
     {
@@ -96,13 +102,25 @@ class FicheController extends Controller
         'type_damage1'=> 'required',
         ]); // update_validated_anchor;
         $fiche->namePerso = $request->namePerso;
-        $fiche->avatar = $request->file("avatar")->hashName();
+        // $fiche->avatar = $request->file("avatar")->hashName();
+        // default image
+        if ($request->avatar === null) {
+            $fiche->avatar = $fiche->avatar;
+        } else {
+            if ($fiche->avatar != "default.jpg") {
+                File::delete("images/". $fiche->avatar);
+            }
+            $fiche->avatar = $request->avatar->hashName();
+            $request->file("avatar")->storePublicly('img', 'public');
+        }
         // $fiche->background = $request->background;
         $fiche->user->background_id = $request->background;
-        $fiche->user->save();
+        $fiche->user->race_id = $request->race;
+        $fiche->user->classe_id = $request->class;
         $fiche->class = $request->class;
+        $fiche->user->save();
         $fiche->level = $request->level;
-        $fiche->race = $request->race;
+        // $fiche->race = $request->race;
         $fiche->alignment = $request->alignment;
         $fiche->experience = $request->experience;
         $fiche->strength = $request->strength;
@@ -164,7 +182,6 @@ class FicheController extends Controller
         $fiche->bonus_attack1 = $request->bonus_attack1;
         $fiche->type_damage1 = $request->type_damage1;
         $fiche->save(); // update_anchor
-        $request->file("avatar")->storePublicly('img', 'public');
         return redirect()->route('fichepj');
     }
 }

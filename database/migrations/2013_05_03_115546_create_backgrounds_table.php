@@ -16,10 +16,6 @@ return new class extends Migration
         Schema::create('backgrounds', function (Blueprint $table) {
             $table->id();
             $table->string('backgroundName');
-            $table->string('skillProfiency');
-            $table->string('langueProfiencyUpgrade');
-            $table->string('equipmentUpgrade');
-            $table->string('backgroundSkill');
             $table->timestamps();
         });
     }

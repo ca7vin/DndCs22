@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GrimoireController;
+use App\Http\Controllers\ClasseController;
 use App\Http\Controllers\RaceController;
 use App\Http\Controllers\BackgroundController;
 use App\Http\Controllers\FicheController;
@@ -96,3 +97,6 @@ Route::get('/back/backgrounds/{id}/read', [BackgroundController::class, 'read'])
 // Race
 Route::get('/back/races', [RaceController::class, 'index'])->name('race.index');
 Route::get('/back/races/{id}/read', [RaceController::class, 'read'])->name('race.read');
+// Classe
+Route::get('/back/classes', [ClasseController::class, 'index'])->name('classe.index');
+Route::get('/back/classes/{id}/read', [ClasseController::class, 'read'])->name('classe.read');

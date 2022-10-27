@@ -71,8 +71,20 @@
             <!-- Class -->
             <div class="mt-4">
                 <x-label for="class" :value="__('Classe')" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="class" :value="old('class')" required
-                    autofocus />
+                    <select name='class' class="" aria-label="Default select example">
+                        @foreach ($classes as $classe)
+                            <option value="{{ $classe->id }}">{{ $classe->className }}</option>
+                        @endforeach
+                    </select>
+            </div>
+            <!-- Race -->
+            <div class="mt-4">
+                <x-label for="race" :value="__('Race')" />
+                    <select name='race' class="" aria-label="Default select example">
+                        @foreach ($races as $race)
+                            <option value="{{ $race->id }}">{{ $race->race }}</option>
+                        @endforeach
+                    </select>
             </div>
             <!-- Spellcasting Class -->
             <div class="mt-4">
@@ -86,79 +98,16 @@
                 <x-input id="name" class="block mt-1 w-full" type="text" name="spellcasting_ability" :value="old('spellcasting_ability')"
                     required autofocus />
             </div>
-            <!-- Spellcasting Bonus -->
-            <div class="mt-4">
-                <x-label for="spell_attack_bonus" :value="__('Bonus d\'atk aux sorts')" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="spell_attack_bonus"
-                    :value="old('spell_attack_bonus')" required autofocus />
-            </div>
-            <!-- Spell DD -->
-            <div class="mt-4">
-                <x-label for="spell_save_dc" :value="__('DD des sorts')" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="spell_save_dc" :value="old('spell_save_dc')"
-                    required autofocus />
-            </div>
-            <!-- Race -->
-            <div class="mt-4">
-                <x-label for="race" :value="__('Race')" />
-                    <select name='race' class="" aria-label="Default select example">
-                        @foreach ($races as $race)
-                            <option value="{{ $race->id }}">{{ $race->race }}</option>
-                        @endforeach
-                    </select>
-            </div>
-            <!-- Level -->
-            <div class="mt-4">
-                <x-label for="level" :value="__('Niveau')" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="level" :value="old('level')" required
-                    autofocus />
-            </div>
             <!-- Alignement -->
             <div class="mt-4">
                 <x-label for="alignment" :value="__('Alignement')" />
                 <x-input id="name" class="block mt-1 w-full" type="text" name="alignment" :value="old('alignment')" required
                     autofocus />
             </div>
-            <!-- Experience -->
-            <div class="mt-4">
-                <x-label for="experience" :value="__('Experience')" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="experience" :value="old('experience')" required
-                    autofocus />
-            </div>
-            <!-- Maitrise -->
-            <div class="mt-4">
-                <x-label for="proficiency" :value="__('Maitrise')" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="proficiency" :value="old('proficiency')" required
-                    autofocus />
-            </div>
-            <!-- Passive Wisdom -->
-            <div class="mt-4">
-                <x-label for="passive_wisdom" :value="__('Perception Passive')" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="passive_wisdom" :value="old('passive_wisdom')"
-                    required autofocus />
-            </div>
             <!-- Armor Class -->
             <div class="mt-4">
                 <x-label for="armor_class" :value="__('Classe d\'armure')" />
                 <x-input id="name" class="block mt-1 w-full" type="text" name="armor_class" :value="old('armor_class')" required
-                    autofocus />
-            </div>
-            <!-- Initiative -->
-            <div class="mt-4">
-                <x-label for="initiative" :value="__('Initiative')" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="initiative" :value="old('initiative')" required
-                    autofocus />
-            </div>
-            <!-- Vitesse -->
-            <div class="mt-4">
-                <x-label for="speed" :value="__('Vitesse')" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="speed" :value="old('speed')" required
-                    autofocus />
-            </div>
-            <!-- Inspiration -->
-            <div class="mt-4">
-                <x-label for="inspiration" :value="__('Inspiration')" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="inspiration" :value="old('inspiration')" required
                     autofocus />
             </div>
             {{-- life --}}
@@ -220,168 +169,6 @@
                     <div class="mt-4 w-5/12">
                         <x-label for="charisma" :value="__('Charisme')" />
                         <x-input id="name" class="block mt-1 w-full" type="text" name="charisma" :value="old('charisma')"
-                            required autofocus />
-                    </div>
-                </div>
-            </div>
-            <!-- Save -->
-            <div class="flex items-center justify-around w-full mt-10">
-                {{-- Col1 --}}
-                <div class="flex flex-col items-center justify-center w-full">
-                    <!-- Force -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="save_strength" :value="__('Save Force')" />
-                        <x-input id="name" class="block mt-1 w-full" type="text" name="save_strength" :value="old('save_strength')"
-                            required autofocus />
-                    </div>
-                    <!-- Dexterité -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="save_dexterity" :value="__('Save Dextérité')" />
-                        <x-input id="name" class="block mt-1 w-full" type="text" name="save_dexterity"
-                            :value="old('save_dexterity')" required autofocus />
-                    </div>
-                    <!-- Constitution -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="save_constitution" :value="__('Save Constitution')" />
-                        <x-input id="name" class="block mt-1 w-full" type="text" name="save_constitution"
-                            :value="old('save_constitution')" required autofocus />
-                    </div>
-                </div>
-                {{-- Col2 --}}
-                <div class="flex flex-col items-center justify-center w-full">
-                    <!-- Intelligence -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="save_intelligence" :value="__('Save Intelligence')" />
-                        <x-input id="name" class="block mt-1 w-full" type="text" name="save_intelligence"
-                            :value="old('save_intelligence')" required autofocus />
-                    </div>
-                    <!-- Sagesse -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="save_wisdom" :value="__('Save Sagesse')" />
-                        <x-input id="name" class="block mt-1 w-full" type="text" name="save_wisdom" :value="old('save_wisdom')"
-                            required autofocus />
-                    </div>
-                    <!-- Charisme -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="save_charisma" :value="__('Save Charisme')" />
-                        <x-input id="name" class="block mt-1 w-full" type="text" name="save_charisma" :value="old('save_charisma')"
-                            required autofocus />
-                    </div>
-                </div>
-            </div>
-            <!-- Skills -->
-            <div class="flex items-center justify-around w-full mt-10">
-                {{-- Col1 --}}
-                <div class="flex flex-col items-center justify-center w-full">
-                    <!-- 1 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="acrobatics" :value="__('Acrobatics')" />
-                        <x-input id="name" class="block mt-1 w-full" type="number" name="acrobatics" :value="old('acrobatics')"
-                            required autofocus />
-                    </div>
-                    <!-- 2 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="animal_handling" :value="__('Animal Handling')" />
-                        <x-input id="name" class="block mt-1 w-full" type="number" name="animal_handling"
-                            :value="old('animal_handling')" required autofocus />
-                    </div>
-                    <!-- 3 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="arcana" :value="__('Arcana')" />
-                        <x-input id="name" class="block mt-1 w-full" type="number" name="arcana" :value="old('arcana')"
-                            required autofocus />
-                    </div>
-                    <!-- 4 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="athletics" :value="__('Athletics')" />
-                        <x-input id="name" class="block mt-1 w-full" type="number" name="athletics" :value="old('athletics')"
-                            required autofocus />
-                    </div>
-                    <!-- 5 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="deception" :value="__('Deception')" />
-                        <x-input id="name" class="block mt-1 w-full" type="number" name="deception" :value="old('deception')"
-                            required autofocus />
-                    </div>
-                    <!-- 6 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="history" :value="__('History')" />
-                        <x-input id="name" class="block mt-1 w-full" type="number" name="history" :value="old('history')"
-                            required autofocus />
-                    </div>
-                    <!-- 7 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="insight" :value="__('Insight')" />
-                        <x-input id="name" class="block mt-1 w-full" type="number" name="insight" :value="old('insight')"
-                            required autofocus />
-                    </div>
-                    <!-- 8 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="intimidation" :value="__('Intimidation')" />
-                        <x-input id="name" class="block mt-1 w-full" type="number" name="intimidation"
-                            :value="old('intimidation')" required autofocus />
-                    </div>
-                    <!-- 9 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="investigation" :value="__('Investigation')" />
-                        <x-input id="name" class="block mt-1 w-full" type="number" name="investigation"
-                            :value="old('investigation')" required autofocus />
-                    </div>
-                </div>
-                {{-- Col2 --}}
-                <div class="flex flex-col items-center justify-center w-full">
-                    <!-- 10 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="medicine" :value="__('Medicine')" />
-                        <x-input id="name" class="block mt-1 w-full" type="text" name="medicine" :value="old('medicine')"
-                            required autofocus />
-                    </div>
-                    <!-- 11 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="nature" :value="__('Nature')" />
-                        <x-input id="name" class="block mt-1 w-full" type="text" name="nature" :value="old('nature')"
-                            required autofocus />
-                    </div>
-                    <!-- 12 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="perception" :value="__('Perception')" />
-                        <x-input id="name" class="block mt-1 w-full" type="text" name="perception" :value="old('perception')"
-                            required autofocus />
-                    </div>
-                    <!-- 13 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="performance" :value="__('Performance')" />
-                        <x-input id="name" class="block mt-1 w-full" type="text" name="performance" :value="old('performance')"
-                            required autofocus />
-                    </div>
-                    <!-- 14 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="persuasion" :value="__('Persuasion')" />
-                        <x-input id="name" class="block mt-1 w-full" type="text" name="persuasion" :value="old('persuasion')"
-                            required autofocus />
-                    </div>
-                    <!-- 15 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="religion" :value="__('Religion')" />
-                        <x-input id="name" class="block mt-1 w-full" type="text" name="religion" :value="old('religion')"
-                            required autofocus />
-                    </div>
-                    <!-- 16 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="sleight_of_hand" :value="__('Sleight of Hand')" />
-                        <x-input id="name" class="block mt-1 w-full" type="text" name="sleight_of_hand"
-                            :value="old('sleight_of_hand')" required autofocus />
-                    </div>
-                    <!-- 17 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="stealth" :value="__('Stealth')" />
-                        <x-input id="name" class="block mt-1 w-full" type="text" name="stealth" :value="old('stealth')"
-                            required autofocus />
-                    </div>
-                    <!-- 18 -->
-                    <div class="mt-4 w-5/12">
-                        <x-label for="survival" :value="__('Survival')" />
-                        <x-input id="name" class="block mt-1 w-full" type="text" name="survival" :value="old('survival')"
                             required autofocus />
                     </div>
                 </div>

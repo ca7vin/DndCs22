@@ -20,6 +20,7 @@ class UserSeeder extends Seeder
             "name" => "Anne-Catherine Colin",
             "background_id" => 1,
             "race_id" => 1,
+            "classe_id" => 1,
             "email" => "annecatherinecolin@hotmail.com",
             "password" => Hash::make("dropdeadlover"),
         ]);
@@ -27,6 +28,7 @@ class UserSeeder extends Seeder
             "name" => "Aleksic Aleksandar",
             "background_id" => 1,
             "race_id" => 1,
+            "classe_id" => 1,
             "email" => "shinakira@gmail.com",
             "password" => Hash::make("shinakira"),
         ]);
@@ -34,6 +36,7 @@ class UserSeeder extends Seeder
             "name" => "Marcyl Adnan",
             "background_id" => 1,
             "race_id" => 1,
+            "classe_id" => 1,
             "email" => "marcyl.adnan@gmail.com",
             "password" => Hash::make("caramelo"),
         ]);
@@ -41,6 +44,7 @@ class UserSeeder extends Seeder
             "name" => "Samy",
             "background_id" => 1,
             "race_id" => 1,
+            "classe_id" => 1,
             "email" => "samy@gmail.com",
             "password" => Hash::make("ilovecats"),
         ]);
@@ -48,6 +52,7 @@ class UserSeeder extends Seeder
             "name" => "Nicolas Sieben",
             "background_id" => 1,
             "race_id" => 1,
+            "classe_id" => 1,
             "email" => "galestron@gmail.com",
             "password" => Hash::make("tartineaucaca"),
         ]);
@@ -55,6 +60,7 @@ class UserSeeder extends Seeder
             "name" => "Jade",
             "background_id" => 1,
             "race_id" => 1,
+            "classe_id" => 1,
             "email" => "jade@gmail.com",
             "password" => Hash::make("starbucks"),
         ]);
@@ -62,6 +68,7 @@ class UserSeeder extends Seeder
             "name" => "Alix",
             "background_id" => 1,
             "race_id" => 1,
+            "classe_id" => 1,
             "email" => "alix@gmail.com",
             "password" => Hash::make("pyroblast"),
         ]);

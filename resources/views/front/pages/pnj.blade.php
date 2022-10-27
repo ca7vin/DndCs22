@@ -1,7 +1,7 @@
 @extends('front/layouts/app')
 @section('content')
     @include('layouts.navigation')
-    <section id="pnjs" class="mx-10 my-5 flex flex-col items-center justify-center relative" style="height:90vh">
+    <section id="pnjs" class="mx-10 my-5 flex flex-col items-center justify-center relative">
         <img src="{{ asset('img/corner-br.png') }}" alt="" class="cornerDeco absolute right-1 bottom-2">
         <img src="{{ asset('img/corner-bl.png') }}" alt="" class="cornerDeco absolute left-1 bottom-2">
         <img src="{{ asset('img/corner-tl.png') }}" alt="" class="cornerDeco absolute left-1 top-2">

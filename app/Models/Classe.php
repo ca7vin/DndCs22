@@ -5,19 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Background extends Model
+class Classe extends Model
 {
     use HasFactory;
      
     protected $fillable = [
-        'backgroundName',
-        // 'skillProfiency',
-        // 'langueProfiencyUpgrade',
-        // 'equipmentUpgrade',
-        // 'backgroundSkill',
+        'className',
     ]; // model_anchor
      
-    protected $table = 'backgrounds';
+    protected $table = 'classes';
 
     public function users()
     {

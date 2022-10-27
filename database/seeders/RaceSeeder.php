@@ -17,43 +17,57 @@ class RaceSeeder extends Seeder
     {
         DB::table('races')->insert([
             'race' => 'Elfe',
-            'caract' => '+2 DEX',
-            'vitesse' => '9m',
-            'taille' => 'M',
-            'maitrise' => 'perception',
-            'features' => 'ascendance féerique, transe',
-            'langue' => 'elfique',
-            'sort' => '',
         ]);
         DB::table('races')->insert([
             'race' => 'Haut-Elfe',
-            'caract' => '+1 INT',
-            'vitesse' => '9m',
-            'taille' => 'M',
-            'maitrise' => 'épées et arcs',
-            'features' => 'ascendance féerique, transe',
-            'langue' => '1 de votre choix',
-            'sort' => 'sort mineur parmi les sorts de magicien (INT)',
         ]);
         DB::table('races')->insert([
             'race' => 'Elfe des Bois',
-            'caract' => '+1 SAG',
-            'vitesse' => '10.5m',
-            'taille' => 'M',
-            'maitrise' => 'none',
-            'features' => 'cachette naturelle',
-            'langue' => 'elfique',
-            'sort' => 'none',
         ]);
         DB::table('races')->insert([
             'race' => 'Elfe Noir',
-            'caract' => '+1 CHA',
-            'vitesse' => '9m',
-            'taille' => 'M',
-            'maitrise' => 'rapières, épées courtes et arbalètes de poing',
-            'features' => 'Sensibilité au soleil, Magie Drow, Vision dans le noir supérieure',
-            'langue' => 'none',
-            'sort' => 'none',
+        ]);
+        DB::table('races')->insert([
+            'race' => 'Halfelin',
+        ]);
+        DB::table('races')->insert([
+            'race' => 'Halfelin Pied-léger',
+        ]);
+        DB::table('races')->insert([
+            'race' => 'Halfelin Robuste',
+        ]);
+        DB::table('races')->insert([
+            'race' => 'Humain',
+        ]);
+        DB::table('races')->insert([
+            'race' => 'Nain',
+        ]);
+        DB::table('races')->insert([
+            'race' => 'Nain des montagnes',
+        ]);
+        DB::table('races')->insert([
+            'race' => 'Nain des collines',
+        ]);
+        DB::table('races')->insert([
+            'race' => 'Demi-elfe',
+        ]);
+        DB::table('races')->insert([
+            'race' => 'Demi-orc',
+        ]);
+        DB::table('races')->insert([
+            'race' => 'Drakéide',
+        ]);
+        DB::table('races')->insert([
+            'race' => 'Gnome',
+        ]);
+        DB::table('races')->insert([
+            'race' => 'Gnome des forêts',
+        ]);
+        DB::table('races')->insert([
+            'race' => 'Gnome des roches',
+        ]);
+        DB::table('races')->insert([
+            'race' => 'Tieffelin',
         ]);
         //
     }

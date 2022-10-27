@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\Background;
+use App\Models\Classe;
 use App\Models\Fiche;
 use App\Models\Race;
 use App\Models\User;
@@ -25,7 +26,8 @@ class RegisteredUserController extends Controller
     {
         $backgrounds=Background::all();
         $races=Race::all();
-        return view('auth.register', compact('backgrounds', 'races'));
+        $classes=Classe::all();
+        return view('auth.register', compact('backgrounds', 'races', 'classes'));
     }
 
     /**
@@ -50,54 +52,55 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
             'background_id' => $request->background,
             'race_id' => $request->race,
+            'classe_id' => $request->class,
         ]);
         $user->save();
-
         $fiche = new Fiche;
         $fiche->user_id = $user->id;
         $fiche->namePerso = $request->namePerso;
         $fiche->avatar = $request->file("avatar")->hashName();
-        $fiche->class = $request->class;
-        $fiche->level = $request->level;
+        // $fiche->class = $request->class;
+        $fiche->level = 1;
         $fiche->race = $request->race;
+        $fiche->class = $request->class;
         $fiche->alignment = $request->alignment;
-        $fiche->experience = $request->experience;
+        $fiche->experience = 0;
         $fiche->strength = $request->strength;
         $fiche->dexterity = $request->dexterity;
         $fiche->constitution = $request->constitution;
         $fiche->intelligence = $request->intelligence;
         $fiche->wisdom = $request->wisdom;
         $fiche->charisma = $request->charisma;
-        $fiche->passive_wisdom = $request->passive_wisdom;
-        $fiche->inspiration = $request->inspiration;
-        $fiche->proficiency = $request->proficiency;
-        $fiche->save_strength = $request->save_strength;
-        $fiche->save_dexterity = $request->save_dexterity;
-        $fiche->save_constitution = $request->save_constitution;
-        $fiche->save_intelligence = $request->save_intelligence;
-        $fiche->save_wisdom = $request->save_wisdom;
-        $fiche->save_charisma = $request->save_charisma;
-        $fiche->acrobatics = $request->acrobatics;
-        $fiche->animal_handling = $request->animal_handling;
-        $fiche->arcana = $request->arcana;
-        $fiche->athletics = $request->athletics;
-        $fiche->deception = $request->deception;
-        $fiche->history = $request->history;
-        $fiche->insight = $request->insight;
-        $fiche->intimidation = $request->intimidation;
-        $fiche->investigation = $request->investigation; //
-        $fiche->medicine = $request->medicine;
-        $fiche->nature = $request->nature;
-        $fiche->perception = $request->perception;
-        $fiche->performance = $request->performance;
-        $fiche->persuasion = $request->persuasion;
-        $fiche->religion = $request->religion;
-        $fiche->sleight_of_hand = $request->sleight_of_hand;
-        $fiche->stealth = $request->stealth;
-        $fiche->survival = $request->survival;
+        $fiche->passive_wisdom = $request->wisdom;
+        $fiche->inspiration = 0;
+        $fiche->proficiency = 2;
+        $fiche->save_strength = $request->strength;
+        $fiche->save_dexterity = $request->dexterity;
+        $fiche->save_constitution = $request->constitution;
+        $fiche->save_intelligence = $request->intelligence;
+        $fiche->save_wisdom = $request->wisdom;
+        $fiche->save_charisma = $request->charisma;
+        $fiche->acrobatics = $request->dexterity;
+        $fiche->animal_handling = $request->wisdom;
+        $fiche->arcana = $request->intelligence;
+        $fiche->athletics = $request->strength;
+        $fiche->deception = $request->charisma;
+        $fiche->history = $request->intelligence;
+        $fiche->insight = $request->wisdom;
+        $fiche->intimidation = $request->charisma;
+        $fiche->investigation = $request->intelligence; //
+        $fiche->medicine = $request->wisdom;
+        $fiche->nature = $request->intelligence;
+        $fiche->perception = $request->wisdom;
+        $fiche->performance = $request->charisma;
+        $fiche->persuasion = $request->charisma;
+        $fiche->religion = $request->intelligence;
+        $fiche->sleight_of_hand = $request->dexterity;
+        $fiche->stealth = $request->dexterity;
+        $fiche->survival = $request->wisdom;
         $fiche->armor_class = $request->armor_class;
-        $fiche->initiative = $request->initiative;
-        $fiche->speed = $request->speed;
+        $fiche->initiative = $request->dexterity;
+        $fiche->speed = 9;
         $fiche->current_hitpoints = $request->current_hitpoints;
         $fiche->temporary_hitpoints = $request->temporary_hitpoints;
         $fiche->hit_dice = $request->hit_dice; //
@@ -109,8 +112,8 @@ class RegisteredUserController extends Controller
         $fiche->features_traits = $request->features_traits;
         $fiche->spellcasting_class = $request->spellcasting_class;
         $fiche->spellcasting_ability = $request->spellcasting_ability;
-        $fiche->spell_save_dc = $request->spell_save_dc;
-        $fiche->spell_attack_bonus = $request->spell_attack_bonus;
+        $fiche->spell_save_dc = 8 + $request->proficiency + $request->intelligence;
+        $fiche->spell_attack_bonus = $request->proficiency + $request->intelligence;
         $fiche->platinum_coins = $request->platinum_coins;
         $fiche->gold_coins = $request->gold_coins;
         $fiche->silver_coins = $request->silver_coins;

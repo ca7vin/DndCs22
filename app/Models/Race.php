@@ -11,13 +11,13 @@ class Race extends Model
      
     protected $fillable = [
         'race',
-        'caract',
-        'vitesse',
-        'taille',
-        'maitrise',
-        'features',
-        'langue',
-        'sort',
+        // 'caract',
+        // 'vitesse',
+        // 'taille',
+        // 'maitrise',
+        // 'features',
+        // 'langue',
+        // 'sort',
     ]; // model_anchor
      
     protected $table = 'races';
