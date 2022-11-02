@@ -38,12 +38,14 @@ Route::get('/fichepj', function () {
 })->name('fichepj');
 
 Route::get('/grimoire', [GrimoireController::class, 'index'])->name('grimoire');
+Route::get('/spellSearch', [GrimoireController::class, 'search'])->name('spellSearch');
 
 Route::get('/monstres', [MonstreController::class, 'index'])->name('monstres');
 Route::get('/monstreSearch', [MonstreController::class, 'search'])->name('monstreSearch');
 
 Route::get('/items', [ItemController::class, 'index'])->name('items');
 Route::get('/itemSearch', [ItemController::class, 'search'])->name('itemSearch');
+
 
 
 
@@ -107,3 +109,5 @@ Route::get('/back/races/{id}/read', [RaceController::class, 'read'])->name('race
 // Classe
 Route::get('/back/classes', [ClasseController::class, 'index'])->name('classe.index');
 Route::get('/back/classes/{id}/read', [ClasseController::class, 'read'])->name('classe.read');
+
+

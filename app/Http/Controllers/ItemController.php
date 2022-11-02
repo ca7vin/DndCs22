@@ -18,6 +18,7 @@ class ItemController extends Controller
         $next = $request->page + 1;
         $previous = $request->page - 1;
         $items = Http::get("https://api.open5e.com/magicitems/?page=$page")["results"];
+
         return view("front/pages/items",compact('items', 'next', 'previous', 'page'));
     } 
 
@@ -28,5 +29,7 @@ class ItemController extends Controller
         $count = Http::get("https://api.open5e.com/magicitems/?search=$itemSearch")["count"];
         return view("front/pages/itemSearch",compact('item', 'itemSearch', 'count'));
     }
+
+    
 
 }

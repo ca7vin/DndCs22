@@ -1,19 +1,19 @@
-let spells = document.querySelectorAll(".spells");
-let search = document.querySelector("#spellSearch");
+// let spells = document.querySelectorAll(".spells");
+// let search = document.querySelector("#spellSearch");
 
-search.addEventListener("change", () => {
-    spells.forEach((element) => {
-        if (
-            !element.innerText
-                .toLowerCase()
-                .includes(search.value.toLowerCase())
-        ) {
-            element.parentElement.parentElement.classList.add("hidden");
-        } else {
-            element.parentElement.parentElement.classList.remove("hidden");
-        }
-    });
-});
+// search.addEventListener("change", () => {
+//     spells.forEach((element) => {
+//         if (
+//             !element.innerText
+//                 .toLowerCase()
+//                 .includes(search.value.toLowerCase())
+//         ) {
+//             element.parentElement.parentElement.classList.add("hidden");
+//         } else {
+//             element.parentElement.parentElement.classList.remove("hidden");
+//         }
+//     });
+// });
 
 // filters
 let filterWizardBtn = document.querySelector("#filterWizardBtn");

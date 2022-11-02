@@ -17586,6 +17586,18 @@ table{
   z-index: 10;
 }
 
+.focus\:border-0:focus {
+  border-width: 0px;
+}
+
+.focus\:border:focus {
+  border-width: 1px;
+}
+
+.focus\:border-none:focus {
+  border-style: none;
+}
+
 .focus\:border-yellow-300:focus {
   --tw-border-opacity: 1;
   border-color: rgb(250 202 21 / var(--tw-border-opacity));
@@ -17634,6 +17646,11 @@ table{
 .focus\:bg-gray-50:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.focus\:bg-red-400:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 128 128 / var(--tw-bg-opacity));
 }
 
 .focus\:text-yellow-700:focus {
@@ -17706,6 +17723,10 @@ table{
 
 .focus\:ring-opacity-50:focus {
   --tw-ring-opacity: 0.5;
+}
+
+.active\:border-0:active {
+  border-width: 0px;
 }
 
 .active\:bg-yellow-900:active {

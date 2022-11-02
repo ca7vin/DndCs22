@@ -5,6 +5,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+input:focus{
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
 .sidebar{
   position: fixed;
   left: 0;
@@ -112,6 +120,24 @@
   background: #323232;
 }
 .sidebar.open input{
+  padding: 0 20px 0 50px;
+  width: 100%;
+  outline: none;
+}
+.sidebar form{
+  font-size: 15px;
+  color: #FFF;
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: #323232;
+}
+.sidebar.open form{
   padding: 0 20px 0 50px;
   width: 100%;
 }

@@ -27,7 +27,6 @@ class MonstreController extends Controller
     public function search(Request $request){
         $monsterSearch = $request->input('monsterSearch');
         $monstre = Http::get("https://api.open5e.com/monsters/?search=$monsterSearch")["results"];
-        // dd($monstre);
         $count = Http::get("https://api.open5e.com/monsters/?search=$monsterSearch")["count"];
         return view("front/pages/monstreSearch",compact('monstre', 'monsterSearch', 'count'));
     }

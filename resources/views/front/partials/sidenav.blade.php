@@ -6,9 +6,13 @@
     </div>
     <ul class="nav-list">
         <li>
-            <i class='bx bx-search'></i>
-            <input type="text" id="spellSearch" placeholder="Recherche...">
-            <span class="tooltip">Recherche...</span>
+            <form action="{{ route('spellSearch') }}" method="GET">
+                @csrf
+                <i class='bx bx-search'></i>
+                <input onchange="document.getElementById('spellSearch').submit()" type="text" id="spellSearch"
+                    placeholder="Recherche..." name="spellSearch">
+                <span class="tooltip">Recherche...</span>
+            </form>
         </li>
         <li>
             <button id='filterDruidBtn'>
