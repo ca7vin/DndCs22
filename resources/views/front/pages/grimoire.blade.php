@@ -8,7 +8,7 @@
         <div class="w-full card relative cardBg">
             <div class="border-b border-black lg:border-l-0 lg:border-black-400 flex flex-col justify-between leading-normal p-20">
               <div class="mb-8">
-                <p class="text-sm text-black text-center font-black">
+                <p class="text-sm text-black text-center font-black capitalize">
                   {{ $spell['school'] }}
                 </p>
                 <div class="text-red-800 font-black uppercase text-xl mb-2 spells text-center">{{ $spell['name'] }}</div>

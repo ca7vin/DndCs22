@@ -4,14 +4,12 @@
 <section id='monstres' class='home-section flex flex-col items-center w-full'>
     @include('layouts.navigation')
         <div class="flex flex-col items-center justify-center w-full">
-            <div class="flex items-center justify-around mt-5 bg-orange-800 w-full py-2">
-                <a href="?page={{ $previous }}" class="bg-yellow-400 text-orange-800 px-2 py-1 flex items-center justify-center"><i
-                        class='bx bxs-chevrons-left'></i></a>
-                <p class="mx-10 text-xl text-yellow-400">{{ $page }} sur 30</p>
-                <a href="?page={{ $next }}" class="bg-yellow-400 text-orange-800 px-2 py-1 flex items-center justify-center"><i
-                        class='bx bxs-chevrons-right'></i></a>
+            <div class="flex items-center justify-around mt-5 w-full">
+                {{-- <a href="?page={{ $previous }}" class="bg-black text-white px-2 py-1 flex items-center justify-center"><i class='bx bxs-chevrons-left'></i></a> --}}
+                <p class="px-10 text-md text-center bg-orange-800 text-yellow-400 py-1 w-full">{{$count}} résultats trouvés</p>
+                {{-- <a href="?page={{ $next }}" class="bg-black text-white px-2 py-1 flex items-center justify-center"><i class='bx bxs-chevrons-right'></i></a> --}}
             </div>
-            @foreach ($monstres as $monstre)
+            @foreach ($monstre as $monstre)
                 <div class="w-full card cardBg relative">
                     <div
                         class=" border-b border-black lg:border-l-0 lg:border-black-400 p-4 flex flex-col justify-between leading-normal">

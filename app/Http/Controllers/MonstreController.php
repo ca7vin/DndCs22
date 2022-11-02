@@ -20,14 +20,16 @@ class MonstreController extends Controller
         $next = $request->page + 1;
         $previous = $request->page - 1;
         $monstres = Http::get("https://api.open5e.com/monsters/?page=$page")["results"];
-        // foreach ($monstres as $monstre) {
-        //     $monstre = new Monstre($monstre);
-        // }
-        // $monstres = Monstre::paginate(10);
         return view("front/pages/monstres",compact('monstres', 'next', 'previous', 'page'));
-        return view("front/pages/monstres",compact('monstres'));
     } 
-
-
-
+    
+    
+    public function search(Request $request){
+        $monsterSearch = $request->input('monsterSearch');
+        $monstre = Http::get("https://api.open5e.com/monsters/?search=$monsterSearch")["results"];
+        // dd($monstre);
+        $count = Http::get("https://api.open5e.com/monsters/?search=$monsterSearch")["count"];
+        return view("front/pages/monstreSearch",compact('monstre', 'monsterSearch', 'count'));
+    }
 }
+

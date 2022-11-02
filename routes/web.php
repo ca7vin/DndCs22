@@ -5,10 +5,11 @@ use App\Http\Controllers\ClasseController;
 use App\Http\Controllers\RaceController;
 use App\Http\Controllers\BackgroundController;
 use App\Http\Controllers\FicheController;
+use App\Http\Controllers\ItemController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PnjController;
-use App\Http\Controllers\MagesortController;
-use App\Http\Controllers\JoueurController;
+// use App\Http\Controllers\MagesortController;
+// use App\Http\Controllers\JoueurController;
 use App\Http\Controllers\MonstreController;
 use App\Models\Background;
 use App\Models\Fiche;
@@ -39,6 +40,12 @@ Route::get('/fichepj', function () {
 Route::get('/grimoire', [GrimoireController::class, 'index'])->name('grimoire');
 
 Route::get('/monstres', [MonstreController::class, 'index'])->name('monstres');
+Route::get('/monstreSearch', [MonstreController::class, 'search'])->name('monstreSearch');
+
+Route::get('/items', [ItemController::class, 'index'])->name('items');
+Route::get('/itemSearch', [ItemController::class, 'search'])->name('itemSearch');
+
+
 
 Route::get('/carte', function () {
     return view('front/pages/carte');
@@ -55,22 +62,22 @@ Route::get('/pnj', function () {
     return view('front/pages/pnj', compact('pnjs'));
 })->name('pnj');
 
-// Joueur
-Route::get('/back/joueurs', [JoueurController::class, 'index'])->name('joueur.index');
-Route::get('/back/joueurs/create', [JoueurController::class, 'create'])->name('joueur.create');
-Route::post('/back/joueurs/store', [JoueurController::class, 'store'])->name('joueur.store');
-Route::get('/back/joueurs/{id}/read', [JoueurController::class, 'read'])->name('joueur.read');
-Route::get('/back/joueurs/{id}/edit', [JoueurController::class, 'edit'])->name('joueur.edit');
-Route::post('/back/joueurs/{id}/update', [JoueurController::class, 'update'])->name('joueur.update');
-Route::post('/back/joueurs/{id}/delete', [JoueurController::class, 'destroy'])->name('joueur.destroy');
-// Magesort
-Route::get('/back/magesorts', [MagesortController::class, 'index'])->name('magesort.index');
-Route::get('/back/magesorts/create', [MagesortController::class, 'create'])->name('magesort.create');
-Route::post('/back/magesorts/store', [MagesortController::class, 'store'])->name('magesort.store');
-Route::get('/back/magesorts/{id}/read', [MagesortController::class, 'read'])->name('magesort.read');
-Route::get('/back/magesorts/{id}/edit', [MagesortController::class, 'edit'])->name('magesort.edit');
-Route::post('/back/magesorts/{id}/update', [MagesortController::class, 'update'])->name('magesort.update');
-Route::post('/back/magesorts/{id}/delete', [MagesortController::class, 'destroy'])->name('magesort.destroy');
+// // Joueur
+// Route::get('/back/joueurs', [JoueurController::class, 'index'])->name('joueur.index');
+// Route::get('/back/joueurs/create', [JoueurController::class, 'create'])->name('joueur.create');
+// Route::post('/back/joueurs/store', [JoueurController::class, 'store'])->name('joueur.store');
+// Route::get('/back/joueurs/{id}/read', [JoueurController::class, 'read'])->name('joueur.read');
+// Route::get('/back/joueurs/{id}/edit', [JoueurController::class, 'edit'])->name('joueur.edit');
+// Route::post('/back/joueurs/{id}/update', [JoueurController::class, 'update'])->name('joueur.update');
+// Route::post('/back/joueurs/{id}/delete', [JoueurController::class, 'destroy'])->name('joueur.destroy');
+// // Magesort
+// Route::get('/back/magesorts', [MagesortController::class, 'index'])->name('magesort.index');
+// Route::get('/back/magesorts/create', [MagesortController::class, 'create'])->name('magesort.create');
+// Route::post('/back/magesorts/store', [MagesortController::class, 'store'])->name('magesort.store');
+// Route::get('/back/magesorts/{id}/read', [MagesortController::class, 'read'])->name('magesort.read');
+// Route::get('/back/magesorts/{id}/edit', [MagesortController::class, 'edit'])->name('magesort.edit');
+// Route::post('/back/magesorts/{id}/update', [MagesortController::class, 'update'])->name('magesort.update');
+// Route::post('/back/magesorts/{id}/delete', [MagesortController::class, 'destroy'])->name('magesort.destroy');
 // Pnj
 Route::get('/back/pnjs', [PnjController::class, 'index'])->name('pnj.index');
 Route::get('/back/pnjs/create', [PnjController::class, 'create'])->name('pnj.create');
